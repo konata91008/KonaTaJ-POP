@@ -12,15 +12,27 @@
 
 ## 使用
 
-直接開啟 `index.html`，或使用本儲存庫的 GitHub Pages 網址瀏覽。
+網站網址：[pop.konataj.com](https://pop.konataj.com)
+
+也可以直接開啟 `index.html` 在本機瀏覽。
 
 這是一個無需建置的靜態網站，CSS、JavaScript 與內容資料包含在 `index.html`。
 字型使用 Google Fonts；無法連線時會使用系統字型。
 
 ## 更新
 
-修改 `index.html` 並提交到 `main` 分支，GitHub Pages 會依發布設定更新網站。
-`.nojekyll` 用於直接發布靜態檔案。
+網站透過 Cloudflare Pages 連接此 GitHub 儲存庫。
+修改 `index.html` 並提交到 `main` 分支後，Cloudflare 會自動建置及部署；部署成功後正式網址會更新。
+
+部署設定：
+
+- Framework preset：None
+- Production branch：`main`
+- Build command：`mkdir -p public && cp index.html public/index.html`
+- Build output directory：`public`
+
+發布目錄只包含網站所需的 `index.html`。
+請勿將 API 金鑰、密碼、登入憑證、`.env` 或其他私人資料加入此公開儲存庫。
 
 ## 音樂與黑膠資料
 
