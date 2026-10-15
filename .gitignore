@@ -1,0 +1,19 @@
+# Local secrets and provider credentials
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+.wrangler/
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+
+# Local work and generated scratch files
+node_modules/
+work/
+outputs/
+*.log
+.DS_Store
