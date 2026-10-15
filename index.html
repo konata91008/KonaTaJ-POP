@@ -60,6 +60,7 @@ h2{color:#f4efff;text-shadow:0 0 18px #d5baff38,0 0 42px #a78bc41f}
 
 /* The light follows the cursor, then fades fully when it leaves the card. */
 .glow-card{--card-light:var(--artist-color,#c6a7eb);position:relative;isolation:isolate;overflow:hidden;transition:border-color .5s ease,box-shadow .6s ease,background-color .5s ease}
+#artists .glow-card{--card-light:#c6a7eb}
 .glow-card:after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;border-radius:inherit;opacity:0;background:radial-gradient(310px circle at var(--cx,50%) var(--cy,50%),color-mix(in srgb,var(--card-light) 20%,transparent),transparent 74%);transition:opacity .65s ease}
 .glow-card>*{position:relative;z-index:1}
 .glow-card :is(h3,h4,strong){transition:color .45s ease,text-shadow .55s ease}
