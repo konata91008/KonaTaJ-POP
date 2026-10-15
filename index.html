@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="在暗色霧光中探索 12 種 Pop 曲風與 10 組音樂人。經典曲、代表專輯與黑膠收藏指南。"><title>KonaTaJ-POP｜霧裡聽見</title><style>@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Noto+Sans+TC:wght@400;500;600&display=swap');
+:root{color-scheme:dark;--ink:#e8e5ee;--muted:#a9a6b7;--dim:#787486;--line:#e8e5ff20;--accent:#c9b7ef;--mint:#a8c8c1;--serif:'Noto Serif TC','Songti TC',serif;--sans:'Noto Sans TC',system-ui,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:#090b12;color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.85;overflow-x:clip}button,input{font:inherit}button,a,input{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}button{cursor:pointer}a{color:inherit;text-underline-offset:5px}a:hover{color:#fff}button:focus-visible,a:focus-visible,input:focus-visible,[tabindex="-1"]:focus-visible{outline:2px solid var(--mint);outline-offset:5px}button:disabled{opacity:.3;cursor:default}[hidden],.hidden{display:none!important}::selection{background:#9e8fbd55}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:var(--serif);font-weight:400}h2{font-size:clamp(30px,4vw,44px);line-height:1.4;letter-spacing:.03em;margin:13px 0}h3{line-height:1.4}button{color:inherit;border:1px solid var(--line);background:transparent}button:hover{border-color:#d0c3ee66}.eyebrow,.micro{font-size:10px;letter-spacing:.2em;text-transform:uppercase}.eyebrow{color:var(--accent)}.micro{color:var(--muted)}.ambient{position:fixed;inset:0;z-index:-2;overflow:hidden;background:radial-gradient(ellipse at 50% 0,#231c3630,transparent 65%),#090b12;pointer-events:none}.cloud{position:absolute;width:85vw;height:80vh;border-radius:45%;filter:blur(75px);opacity:.35;will-change:transform}.cloud-a{top:-10%;left:-35%;background:radial-gradient(ellipse,#77639b70,transparent 65%);animation:cloudA 19s ease-in-out infinite alternate}.cloud-b{right:-25%;top:20%;background:radial-gradient(ellipse,#436f7470,transparent 68%);animation:cloudB 23s ease-in-out infinite alternate}.cloud-c{left:10%;bottom:-50%;background:radial-gradient(ellipse,#82586c60,transparent 70%);animation:cloudA 27s ease-in-out infinite alternate-reverse}.grain{position:fixed;inset:0;opacity:.035;pointer-events:none;z-index:6;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}.cursor-glow{position:fixed;z-index:-1;width:550px;height:550px;left:0;top:0;border-radius:50%;background:radial-gradient(circle,#8b71b010,transparent 65%);transform:translate(-100%,-100%);pointer-events:none}.topbar{position:relative;z-index:7;display:flex;justify-content:space-between;align-items:center;margin:0 auto;padding:26px 5.5%;max-width:1500px;gap:15px}.brand{font-size:11px;letter-spacing:.24em;text-decoration:none;display:flex;gap:13px;align-items:center}.brand-dot{width:17px;height:17px;border:1px solid #bba2e680;border-radius:50%;box-shadow:0 0 20px #bea2ef35,inset 0 0 8px #bea2ef45;animation:pulse 5s ease-in-out infinite}.motion-toggle{font-size:10px;letter-spacing:.1em;padding:7px 12px;border-radius:30px;color:var(--muted);display:flex;gap:8px;align-items:center}.motion-toggle:before{content:'';width:5px;height:5px;background:var(--mint);border-radius:50%;box-shadow:0 0 7px var(--mint)}.motion-toggle[aria-pressed="true"]:before{background:var(--dim);box-shadow:none}main{max-width:1360px;margin:auto;padding:0 5.5%}.panel{min-height:75vh;animation:pageIn .65s both}.hero{min-height:min(690px,82vh);display:flex;align-items:center;position:relative;isolation:isolate;margin-bottom:35px}.hero-content{position:relative;z-index:2;padding:60px 0;pointer-events:none;width:100%}.hero h1{font-size:clamp(64px,8.7vw,118px);line-height:1.28;letter-spacing:.1em;margin:25px 0 28px;position:relative;width:max-content;max-width:100%}.dream-type{display:block;color:#ddd7e7;filter:blur(1.7px);opacity:.68;animation:typeBreathe 9s ease-in-out infinite}.clear-type{position:absolute;inset:0;color:#fff9ff;opacity:var(--reveal,0);transition:opacity 1.5s;mask-image:radial-gradient(ellipse 245px 195px at var(--tx,-400px) var(--ty,-400px),#000e 0%,#0009 25%,#0004 52%,#0001 76%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 245px 195px at var(--tx,-400px) var(--ty,-400px),#000e 0%,#0009 25%,#0004 52%,#0001 76%,transparent 100%);text-shadow:0 0 23px #e1c8ff28}.hero em{font-style:normal;color:#b7a5d1}.hero .eyebrow{font-size:9px;letter-spacing:.27em}.lead{max-width:480px;color:#b1aabb;line-height:2.1;font-size:14px}.hero-foot{margin-top:35px;display:flex;gap:24px;color:var(--dim);font-size:10px;letter-spacing:.1em}.hero-foot span+span:before{content:'·';margin-right:24px}.fog-hint{margin-top:25px;color:#aaa0b9;font-size:10px;letter-spacing:.18em;display:flex;align-items:center;gap:10px}.fog-hint:before{content:'';width:25px;height:1px;background:linear-gradient(90deg,transparent,#b9a7d0);animation:hint 3s ease-in-out infinite}.mist-canvas{position:fixed;inset:-120px;width:calc(100% + 240px);height:calc(100% + 240px);max-width:none;pointer-events:none;z-index:5;opacity:var(--mist-opacity,.48);transition:opacity 1.8s ease}.orbit-art{position:absolute;right:1%;top:16%;width:440px;height:440px;z-index:0;pointer-events:none}.planet{position:absolute;inset:-30px;border-radius:43% 57% 61% 39% / 52% 42% 58% 48%;background:radial-gradient(ellipse at 36% 30%,#c9a6da28 0%,#8c7f9b20 20%,#617b8220 42%,#576b7410 60%,transparent 80%),radial-gradient(ellipse at 63% 62%,#72959b20,transparent 70%);mask-image:radial-gradient(ellipse at 48% 47%,#000 12%,#000c 38%,#0006 58%,transparent 83%);-webkit-mask-image:radial-gradient(ellipse at 48% 47%,#000 12%,#000c 38%,#0006 58%,transparent 83%);filter:blur(24px);animation:planetBreath 10s ease-in-out infinite}.ring{position:absolute;inset:75px -85px;border:0;border-radius:50%;transform:rotate(-33deg);background:radial-gradient(ellipse,transparent 24%,#bda6d908 39%,#bda6d917 49%,#bda6d90b 60%,transparent 76%);filter:blur(16px);opacity:.6;animation:ringTurn 28s ease-in-out infinite alternate}.ring.two{inset:25px 45px;transform:rotate(30deg);background:radial-gradient(ellipse,transparent 20%,#a2c6bd06 38%,#a2c6bd12 50%,#a2c6bd08 64%,transparent 82%);filter:blur(22px);opacity:.5;animation-duration:36s;animation-direction:alternate-reverse}.orbit-caption{position:absolute;right:12%;bottom:0;font-size:9px;color:#827b93;letter-spacing:.2em;writing-mode:vertical-rl}.section-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin:0 0 30px}.section-head p{max-width:450px;color:var(--muted);font-size:13px;margin:0}.section-head.compact{padding-top:48px}.tools{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 25px}.search{flex:1;min-width:210px;border:1px solid var(--line);background:#ffffff04;color:var(--ink);padding:12px 17px;border-radius:8px;font-size:12px}.search::placeholder{color:#827d93}.filter{padding:9px 15px;border-radius:25px;color:var(--muted);font-size:11px}.filter[aria-pressed="true"]{background:#bba0e31c;border-color:#bba0e34d;color:#e6d8ff}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{position:relative;overflow:hidden;padding:28px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,#ffffff06,#ffffff01);transition:transform .35s,border-color .35s;animation:cardIn .7s both;animation-delay:calc(var(--order,0)*.06s)}.card:before{content:'';position:absolute;inset:0;background:radial-gradient(350px circle at var(--cx,100%) var(--cy,0%),#9e82c312,transparent 70%);pointer-events:none}.card:hover{transform:translateY(-6px);border-color:#c3afe04a}.card h3{font-size:25px;margin:22px 0 3px}.num{font-size:9px;color:var(--dim);letter-spacing:.19em}.en{color:var(--accent);font-size:10px;letter-spacing:.15em}.scene{font-family:var(--serif);color:#d4c5e3;font-size:16px;margin:24px 0 17px}.card p{font-size:12px;color:var(--muted);line-height:1.95}.label{display:block;color:#8f86a1;font-size:10px;letter-spacing:.12em;margin-top:20px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{border:1px solid #ffffff16;border-radius:20px;font-size:10px;color:#bcb4cc;padding:3px 9px}.card .tags{margin-top:20px}.pagination{display:flex;justify-content:center;align-items:center;gap:17px;padding:28px 0 12px}.pagination button{width:38px;height:38px;border-radius:50%}.pagination span{font-size:11px;letter-spacing:.18em;color:var(--muted)}.note{font-size:11px;color:var(--muted);border-left:1px solid #ba9fd94d;padding:5px 18px;margin:28px 0;line-height:1.9}.empty{color:var(--muted);font-size:13px;padding:30px 0}.dock-wrap{position:fixed;bottom:max(24px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:20;max-width:calc(100% - 24px)}.dock{display:flex;position:relative;padding:6px;border:1px solid #e1d1ff30;border-radius:60px;background:#17141dcc;backdrop-filter:blur(28px);box-shadow:0 12px 50px #0007,0 0 30px #a58ac21b}.dock:before{content:'';position:absolute;inset:-1px;border-radius:inherit;box-shadow:0 0 18px #a88ec522;pointer-events:none;animation:pulse 7s ease-in-out infinite}.dock button{position:relative;border:0;border-radius:40px;min-width:118px;padding:11px 24px;color:#a6a0b6;transition:color .3s,background .3s;white-space:nowrap;display:flex;align-items:center;justify-content:center;gap:10px;font-size:12px}.dock button[aria-selected="true"]{color:#f6f0ff;background:linear-gradient(115deg,#d1b5f22d,#a0c4ba19);box-shadow:inset 0 0 0 1px #d7c4f023}.dock .nav-number{font-size:9px;letter-spacing:.05em;color:#847b94}.dock button[aria-selected="true"] .nav-number{color:#cebcdf}.artist-layout{display:grid;grid-template-columns:225px minmax(0,1fr);gap:40px;align-items:start}.artist-sidebar{position:sticky;top:25px}.artist-sidebar .search{min-width:0;width:100%;margin:0 0 16px}.artist-list{display:flex;flex-direction:column;gap:3px}.artist-choice{border:0;border-radius:8px;text-align:left;padding:11px 12px;display:flex;gap:12px;align-items:center;font-size:12px;color:#a29aaf;transition:.2s}.artist-choice .index{font-size:9px;color:#766f85}.artist-choice[aria-pressed="true"]{background:linear-gradient(90deg,#b49bc021,#b49bc004);color:#e9ddef}.artist-choice[aria-pressed="true"]:after{content:'↗';margin-left:auto;color:var(--accent)}.artist-choice:hover{background:#ffffff06;color:#fff}.artist-detail{min-width:0;animation:pageIn .55s both}.artist-banner{position:relative;padding:35px 0 30px;border-bottom:1px solid var(--line);overflow:hidden}.artist-banner:before{content:'';position:absolute;width:450px;height:300px;right:-180px;top:-90px;background:radial-gradient(ellipse,var(--artist-color),transparent 70%);opacity:.13;filter:blur(30px);z-index:-1}.artist-banner h2{font-size:clamp(31px,4.5vw,57px);letter-spacing:-.02em;margin:13px 0 16px;overflow-wrap:anywhere}.artist-banner .scene{margin:23px 0 12px;font-size:18px}.artist-banner p{color:var(--muted);max-width:700px;font-size:13px}.artist-banner .bridge{color:#9b90aa;font-size:11px;margin:15px 0 0}.detail-section{padding-top:30px}.detail-title{display:flex;gap:15px;align-items:center;margin-bottom:16px}.detail-title h3{font-size:19px;margin:0}.detail-title span{font-size:9px;letter-spacing:.17em;color:var(--dim)}.track-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.track{display:flex;gap:13px;align-items:center;padding:15px;border:1px solid #ffffff13;border-radius:8px;background:#ffffff02}.track-num{font-size:10px;color:#8d7b9e;align-self:flex-start;padding-top:4px}.track strong{font-size:12px;font-weight:400;display:block;line-height:1.6}.track small{font-size:10px;color:#8b839a;display:block;margin-top:4px}.album-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.album{border-top:1px solid #bba1da40;padding:15px 0 6px;min-width:0}.album strong{font-size:13px;font-weight:500;line-height:1.6;display:block;overflow-wrap:anywhere}.album small{font-size:10px;color:#9a8ba7;display:block;margin:5px 0 10px}.album p{font-size:11px;color:var(--muted);line-height:1.8;margin-bottom:0}.vinyl-pick{display:grid;grid-template-columns:180px 1fr;gap:26px;align-items:center;padding:28px;margin:32px 0 0;background:linear-gradient(120deg,#ffffff05,#ffffff01);border:1px solid #c9b4db2b;border-radius:14px;overflow:hidden;position:relative}.record-wrap{width:166px;height:166px;position:relative;display:grid;place-items:center}.record{width:162px;height:162px;border-radius:50%;position:absolute;background:repeating-radial-gradient(circle,#15151c 0,#15151c 1px,#22212b 2px,#15151c 3px);box-shadow:0 0 32px #b79ad21a,0 10px 35px #0006;animation:spin 16s linear infinite}.record:before{content:'';position:absolute;inset:0;border-radius:50%;background:conic-gradient(transparent 0deg,#ffffff17 40deg,transparent 75deg,transparent 170deg,#ffffff12 220deg,transparent 270deg)}.record-label{width:53px;height:53px;border-radius:50%;background:var(--artist-color);position:relative;display:grid;place-items:center;color:#1d1924;text-align:center;font-size:7px;letter-spacing:.15em;line-height:1.6}.record-label:after{content:'';width:6px;height:6px;border-radius:50%;background:#11111b;border:1px solid #ccc7;position:absolute;top:23px;left:23px}.record-label span{transform:translateY(-12px)}.vinyl-copy h3{font-size:22px;margin:10px 0;overflow-wrap:anywhere}.vinyl-copy .format{font-size:10px;color:#ad9abd}.vinyl-copy p{font-size:12px;color:var(--muted);margin:12px 0}.vinyl-copy .buy-note{font-size:10px;color:#93899e}.source-link{font-size:11px;color:#d2c0df;text-decoration:none;display:inline-block;border-bottom:1px solid #c3a7d54d;padding:4px 0}.source-link:hover{border-color:#fff}.collection-note{font-size:10px;color:#817b8c;margin:15px 0 0}.artist-empty{padding:15px;font-size:12px;color:var(--muted)}.connections-intro{padding:70px 0 35px}.connections-intro h2{font-size:clamp(38px,6vw,65px)}.connections-intro p{max-width:570px;color:var(--muted);font-size:13px}.map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.map-item{border:1px solid var(--line);border-radius:12px;background:#ffffff03;padding:28px;position:relative;overflow:hidden}.map-item:before{content:'';position:absolute;width:130px;height:130px;right:-15px;top:-60px;background:#b89ec91f;filter:blur(35px);border-radius:50%;animation:cloudA 10s infinite alternate}.map-index{color:#766c86;font-size:9px;letter-spacing:.2em}.map-item h3{font-size:21px;margin:18px 0 12px}.map-item p{font-size:12px;color:var(--muted);margin:0}.connection-line{width:80px;height:1px;margin:15px 0;background:linear-gradient(90deg,#bca1d466,#9fc7c055);position:relative}.connection-line:before,.connection-line:after{content:'';position:absolute;width:5px;height:5px;top:-2px;border-radius:50%;background:#bca1d4;box-shadow:0 0 8px #bca1d466}.connection-line:after{right:0;background:#a4c1bb;animation:traveller 4s ease-in-out infinite}.listening-path{margin-top:30px;padding:28px;border:1px solid var(--line);border-radius:12px}.path-stops{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px}.path-stops span{font-family:var(--serif);font-size:17px;color:#c7b9d4}.path-stops i{width:30px;height:1px;background:#b7a1ce55;position:relative}.path-stops i:after{content:'';position:absolute;width:5px;height:5px;border-radius:50%;top:-2px;background:#b7a1ce;animation:traveller 3s ease-in-out infinite}.references{border-top:1px solid var(--line);padding:22px 0 0;margin-top:45px;font-size:11px;color:var(--muted)}.references summary{cursor:pointer;color:#ada3bd;list-style:none}.references summary:after{content:' ＋';float:right}.references[open] summary:after{content:' −'}.sources{display:flex;gap:12px 22px;flex-wrap:wrap;padding-top:20px;font-size:10px}.references p{font-size:10px;color:#8f889c;margin-top:18px}footer{padding:36px 0 125px;display:flex;justify-content:space-between;gap:20px;color:#6e687b;font-size:9px;letter-spacing:.13em}.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.pause-motion *,.pause-motion *:before,.pause-motion *:after{animation:none!important;transition:none!important}.pause-motion .dream-type{filter:blur(.5px);opacity:.9}.pause-motion .clear-type{transition:none}.pause-motion .mist-canvas{opacity:.25}
+@keyframes cloudA{from{transform:translate(-5%,-10%) rotate(-15deg) scale(1)}to{transform:translate(25%,20%) rotate(25deg) scale(1.2)}}@keyframes cloudB{from{transform:translate(15%,20%) rotate(10deg)}to{transform:translate(-20%,-15%) rotate(-20deg)}}@keyframes ringTurn{to{transform:rotate(15deg) scale(.9,1.2)}}@keyframes planetBreath{50%{transform:translateY(-25px) scale(1.06);filter:blur(32px)}}@keyframes typeBreathe{0%,100%{filter:blur(1.1px);opacity:.94;transform:translateY(0)}45%{filter:blur(2px);opacity:.78;transform:translateY(-3px)}70%{filter:blur(1.4px);opacity:.9}}@keyframes pulse{50%{opacity:.5}}@keyframes hint{50%{transform:translateX(7px);opacity:.4}}@keyframes pageIn{from{opacity:0;transform:translateY(12px);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}@keyframes cardIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes traveller{50%{transform:translateX(-25px);opacity:.4}}
+@media(min-width:1500px){.hero{min-height:720px}}@media(max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.orbit-art{right:-50px;width:330px;height:330px;top:22%;opacity:.7}.artist-layout{grid-template-columns:190px minmax(0,1fr);gap:25px}.album-list{grid-template-columns:1fr}.album{padding:12px 0}.vinyl-pick{grid-template-columns:120px 1fr;gap:20px;padding:24px}.record-wrap{width:115px;height:115px}.record{width:115px;height:115px}.section-head p{max-width:340px}.path-stops span{font-size:15px}}
+@media(max-width:720px){.topbar{padding:20px 6%}.brand{letter-spacing:.13em;font-size:10px;gap:8px}.topbar .motion-toggle{font-size:9px;padding:6px 10px}main{padding:0 6%}.hero{min-height:580px;margin-bottom:10px}.hero-content{padding:55px 0 30px}.hero h1{font-size:clamp(46px,14vw,80px);letter-spacing:.07em}.hero .eyebrow{max-width:230px;line-height:2;font-size:8px}.hero-foot{gap:12px;font-size:9px}.hero-foot span+span:before{margin-right:12px}.lead{font-size:12px;max-width:310px}.orbit-art{width:230px;height:230px;right:-20px;top:24%;opacity:.5}.ring{inset:60px -20px}.ring.two{inset:25px 40px}.orbit-caption{display:none}.section-head{display:block;margin-bottom:24px}.section-head p{max-width:100%;font-size:12px;margin-top:15px}.section-head.compact{padding-top:28px}.grid{grid-template-columns:1fr}.card{padding:25px}.card h3{font-size:25px}.tools{gap:8px}.tools .search{flex-basis:100%}.filter{font-size:10px;padding:8px 12px}.dock-wrap{bottom:max(18px,env(safe-area-inset-bottom))}.dock{padding:5px}.dock button{min-width:94px;padding:11px 15px;font-size:11px;gap:8px}.dock .nav-number{font-size:8px}.artist-layout{display:block}.artist-sidebar{position:relative;top:0;margin-bottom:8px}.artist-sidebar .search{margin-bottom:12px}.artist-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding-bottom:10px}.artist-choice{font-size:11px;padding:9px;gap:7px}.artist-choice[aria-pressed="true"]:after{font-size:10px}.artist-banner{padding-top:20px}.artist-banner h2{font-size:36px}.artist-banner .scene{font-size:16px}.track-grid{grid-template-columns:1fr}.track{padding:13px}.album-list{grid-template-columns:1fr}.vinyl-pick{grid-template-columns:1fr;padding:24px;gap:20px}.record-wrap{margin:0 auto;width:135px;height:135px}.record{width:135px;height:135px}.vinyl-copy h3{font-size:24px}.map{grid-template-columns:1fr}.connections-intro{padding:38px 0 20px}.map-item{padding:25px}.path-stops{flex-wrap:wrap;justify-content:flex-start;gap:15px}.path-stops span{font-size:14px}.path-stops i{width:15px}.path-stops i:after{animation:none}footer{display:block;padding-bottom:120px}footer span{display:block;margin-bottom:9px}.cursor-glow{display:none}.grain{opacity:.025}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.dream-type{filter:blur(.5px);opacity:.9}.mist-canvas{opacity:.25}}
+
+/* Selective light: luminous headings with quieter body copy. */
+.dream-type{color:#fbf5ff;text-shadow:0 0 9px #f1dcff55,0 0 30px #d6b7f64d,0 0 68px #ba92e52b}
+.clear-type{color:#fffaff;text-shadow:0 0 6px #fff4ff80,0 0 20px #dfc7ff70,0 0 48px #bc92f03d}
+.hero em{color:#e0caff;text-shadow:0 0 20px #cb9eff66}
+h2{color:#f4efff;text-shadow:0 0 18px #d5baff38,0 0 42px #a78bc41f}
+.card h3,.map-item h3{color:#eee8f8;text-shadow:0 0 16px #d3b4f42e}
+.eyebrow,.en{color:#dec9fa;text-shadow:0 0 11px #c4a1ef40}
+.dock button[aria-selected="true"]{color:#fff8ff;text-shadow:0 0 9px #e8c9ff80,0 0 22px #c69be24d}
+.artist-choice[aria-pressed="true"]{color:#f8edff;text-shadow:0 0 12px #d5b0f252}
+.vinyl-copy h3{color:#e4f7f1;text-shadow:0 0 18px #a0dac040,0 0 38px #83b6ab1c}
+
+/* The cover caption shares the title's cursor reveal, with gentler blur for small type. */
+.mist-caption{position:relative;max-width:480px;isolation:isolate}
+.caption-soft,.caption-clear{display:flow-root}
+.caption-soft .lead{color:#c9bfd6;text-shadow:0 0 14px #ccb5ed35;animation:captionBreathe 11s ease-in-out infinite}
+.caption-soft .fog-hint{color:#bcb0cc;text-shadow:0 0 12px #c4a8e830;animation:captionBreathe 13s -4s ease-in-out infinite}
+.caption-soft .hero-foot{color:#a99bb9;text-shadow:0 0 11px #c4a8e82b;animation:captionBreathe 15s -8s ease-in-out infinite}
+.caption-clear{position:absolute;inset:0;pointer-events:none;opacity:var(--reveal,0);transition:opacity 1.8s ease;mask-image:radial-gradient(ellipse 230px 150px at var(--tx,-400px) var(--ty,-400px),#000 0%,#000c 22%,#0006 46%,#0002 72%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 230px 150px at var(--tx,-400px) var(--ty,-400px),#000 0%,#000c 22%,#0006 46%,#0002 72%,transparent 100%)}
+.caption-clear .lead{color:#fff5ff;text-shadow:0 0 7px #efdaff75,0 0 22px #cfadf156}
+.caption-clear .fog-hint,.caption-clear .hero-foot{color:#eadcf9;text-shadow:0 0 7px #e0c6fc70,0 0 18px #c8a1ee4d}
+@keyframes captionBreathe{
+  0%,100%{filter:blur(.3px);opacity:.94;transform:translate(0,0)}
+  29%{filter:blur(.85px);opacity:.77;transform:translate(.4px,-1px)}
+  61%{filter:blur(.4px);opacity:.9;transform:translate(-.4px,.5px)}
+  82%{filter:blur(.65px);opacity:.83;transform:translate(.2px,-.5px)}
+}
+.pause-motion .caption-soft>*{filter:none;opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.caption-soft>*{filter:none;opacity:1;transform:none}}
+
+/* Collection shelf: a clear first choice, followed by compact ranked records. */
+.detail-title{flex-wrap:wrap}
+.collection-section{padding-top:38px}
+.collection-count{margin-left:auto;white-space:nowrap}
+.ranking-intro{font-size:12px;color:var(--muted);margin:0 0 20px;max-width:580px}
+.vinyl-ranking{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;padding:0}
+.vinyl-entry{min-width:0;padding:23px;border:1px solid #c9b4db2b;border-radius:14px;background:linear-gradient(140deg,#ffffff05,#ffffff01)}
+.vinyl-featured{grid-column:1/-1;padding:27px;background:linear-gradient(125deg,#b5a0d20c,#9fc8bb06 65%,#ffffff01);border-color:#c9b4db44}
+.rank-head{display:flex;align-items:center;gap:12px;margin-bottom:17px}
+.rank-number{font-family:var(--serif);font-size:34px;font-variant-numeric:tabular-nums;line-height:1;color:#9d92af;letter-spacing:-.06em}
+.rank-label{font-size:10px;letter-spacing:.1em;color:#b7abc7}
+.rank-caption{font-size:8px;letter-spacing:.12em;color:#736d80;margin-left:auto;text-align:right}
+.vinyl-featured .rank-number{font-size:44px;color:#ecdfc8;text-shadow:0 0 18px #e0bd7840}
+.vinyl-featured .rank-label{color:#e4d0ac;border:1px solid #d5b77a35;padding:4px 10px;border-radius:20px;background:#c5a57008}
+.vinyl-featured .vinyl-body{display:grid;grid-template-columns:166px minmax(0,1fr);gap:26px;align-items:center}
+.vinyl-body,.vinyl-copy{min-width:0}
+.vinyl-copy h4{font-family:var(--serif);font-size:21px;font-weight:400;line-height:1.45;color:#e4f7f1;text-shadow:0 0 18px #a0dac02b;margin:0 0 10px;overflow-wrap:anywhere}
+.vinyl-featured .vinyl-copy h4{font-size:25px}
+.vinyl-entry .source-link{font-size:10px;line-height:1.7}
+.vinyl-entry .buy-note{line-height:1.9}
+.album{padding:17px;border:1px solid #bba1da26;border-top-color:#bba1da40;border-radius:9px;background:#ffffff02}
+.catalogue-note{font-size:11px;color:#b2a5c0;padding:13px 16px;border-left:1px solid #bba1da45;margin:18px 0 0;background:linear-gradient(90deg,#baa1da08,transparent)}
+
+/* The light follows the cursor, then fades fully when it leaves the card. */
+.glow-card{--card-light:var(--artist-color,#c6a7eb);position:relative;isolation:isolate;overflow:hidden;transition:border-color .5s ease,box-shadow .6s ease,background-color .5s ease}
+.glow-card:after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;border-radius:inherit;opacity:0;background:radial-gradient(310px circle at var(--cx,50%) var(--cy,50%),color-mix(in srgb,var(--card-light) 20%,transparent),transparent 74%);transition:opacity .65s ease}
+.glow-card>*{position:relative;z-index:1}
+.glow-card :is(h3,h4,strong){transition:color .45s ease,text-shadow .55s ease}
+.card:before{display:none}
+@media(hover:hover) and (pointer:fine){
+  .glow-card:hover{border-color:color-mix(in srgb,var(--card-light) 60%,transparent);box-shadow:0 0 24px color-mix(in srgb,var(--card-light) 15%,transparent),0 0 64px color-mix(in srgb,var(--card-light) 7%,transparent),inset 0 0 24px color-mix(in srgb,var(--card-light) 6%,transparent)}
+  .glow-card:hover:after{opacity:1;transition-duration:.25s}
+  .glow-card:hover :is(h3,h4,strong){color:#fff6ff;text-shadow:0 0 11px color-mix(in srgb,var(--card-light) 60%,transparent),0 0 30px color-mix(in srgb,var(--card-light) 30%,transparent)}
+}
+.glow-card:has(:focus-visible){border-color:#cfb6ef80;box-shadow:0 0 25px #bea0e220,inset 0 0 22px #bea0e20c}
+.glow-card:has(:focus-visible):after{opacity:1}
+@media(max-width:1050px){
+  .vinyl-featured .vinyl-body{grid-template-columns:115px minmax(0,1fr);gap:20px}
+  .vinyl-entry{padding:20px}
+  .vinyl-entry .rank-caption{display:none}
+  .vinyl-copy h4{font-size:20px}
+}
+@media(max-width:850px){.vinyl-ranking{grid-template-columns:1fr}.vinyl-entry .rank-caption{display:block}}
+@media(max-width:720px){
+  .vinyl-featured .vinyl-body{grid-template-columns:1fr;gap:22px}
+  .vinyl-featured .record-wrap{margin:2px auto 8px}
+  .vinyl-featured .vinyl-copy h4{font-size:24px}
+  .collection-section .detail-title{gap:8px 12px}
+  .collection-section .detail-title>span:not(.collection-count){display:none}
+  .album{padding:17px}
+}
+</style></head>
+<body>
+<div class="ambient" aria-hidden="true"><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div><div class="cloud cloud-c"></div></div><div class="grain" aria-hidden="true"></div><div class="cursor-glow" aria-hidden="true"></div>
+<canvas class="mist-canvas" id="mistCanvas" aria-hidden="true"></canvas>
+<header class="topbar"><a class="brand" href="#genres" data-home><span class="brand-dot" aria-hidden="true"></span>霧裡聽見 / POP ATLAS</a><button class="motion-toggle" id="motionToggle" aria-pressed="false" aria-label="暫停動畫">動態開啟</button></header>
+<div class="dock-wrap"><nav class="dock" role="tablist" aria-label="探索分頁"><button type="button" id="tab-genres" role="tab" aria-controls="genres" aria-selected="true" data-page="genres"><span class="nav-number" aria-hidden="true">01</span>曲風</button><button type="button" id="tab-artists" role="tab" aria-controls="artists" aria-selected="false" tabindex="-1" data-page="artists"><span class="nav-number" aria-hidden="true">02</span>音樂人</button><button type="button" id="tab-connections" role="tab" aria-controls="connections" aria-selected="false" tabindex="-1" data-page="connections"><span class="nav-number" aria-hidden="true">03</span>交會</button></nav></div>
+<main>
+<noscript><p class="note">請開啟 JavaScript，以使用曲風分頁、音樂人介紹與互動霧效。</p></noscript>
+<section id="genres" class="panel" role="tabpanel" aria-labelledby="tab-genres" tabindex="0">
+<header class="hero" id="mistHero"><div class="orbit-art" aria-hidden="true"><div class="planet"></div><div class="ring"></div><div class="ring two"></div><span class="orbit-caption">SOUND IN SLOW ORBIT / 001</span></div><div class="hero-content"><div class="eyebrow">A field guide to soft sounds & inner worlds</div><h1 id="mistTitle" data-mist-text><span class="dream-type">霧裡<em>，</em><br>聽見自己。</span><span class="clear-type" aria-hidden="true">霧裡<em>，</em><br>聽見自己。</span></h1><div class="mist-caption" id="mistCaption" data-mist-text><div class="caption-soft"><p class="lead">從臥室的低語，到夢境的迴聲。<br>沿著音色、空間與情緒，探索流行音樂的不同形狀。</p><div class="fog-hint">輕移游標，撥開霧氣 · 觸控可輕掃</div><div class="hero-foot"><span>12 種 POP 座標</span><span>10 組音樂人</span><span>慢慢靠近</span></div></div><div class="caption-clear" aria-hidden="true"><p class="lead">從臥室的低語，到夢境的迴聲。<br>沿著音色、空間與情緒，探索流行音樂的不同形狀。</p><div class="fog-hint">輕移游標，撥開霧氣 · 觸控可輕掃</div><div class="hero-foot"><span>12 種 POP 座標</span><span>10 組音樂人</span><span>慢慢靠近</span></div></div></div></div></header>
+<div id="genreCatalog"><div class="section-head"><div><div class="eyebrow">01 / The sound vocabulary</div><h2>流行的不同霧度</h2></div><p>有些名稱描述聲音，有些關乎製作、文化與歷史。它們是可以重疊的座標，不是互斥的盒子。</p></div><div class="tools"><input class="search" id="genreSearch" type="search" placeholder="搜尋曲風、聲音或感覺…" aria-label="搜尋曲風"><button class="filter" data-filter="all" aria-pressed="true">全部</button><button class="filter" data-filter="texture" aria-pressed="false">聲音質地</button><button class="filter" data-filter="culture" aria-pressed="false">文化與製作</button><button class="filter" data-filter="fusion" aria-pressed="false">融合與取向</button></div><div class="grid" id="genreGrid"></div><p class="empty" id="genreEmpty" hidden>霧裡暫時沒有這個關鍵字，換個詞找找。</p><div class="pagination" id="genrePagination"><button id="genrePrev" aria-label="上一頁曲風">←</button><span id="genreCount" aria-live="polite"></span><button id="genreNext" aria-label="下一頁曲風">→</button></div><p class="note">「溫柔」「適合深夜」不等於 Dream Pop；在臥室錄製，也不必然屬於 Bedroom Pop。這裡的情境比喻是聽感入口。</p></div>
+</section>
+<section id="artists" class="panel" role="tabpanel" aria-labelledby="tab-artists" tabindex="0" hidden><div class="section-head compact"><div><div class="eyebrow">02 / The listening room</div><h2>十種內在風景</h2></div><p>選一位音樂人，從經典曲走進整張專輯。<br>沿著收藏排行，慢慢建立自己的黑膠架。</p></div><div class="artist-layout"><aside class="artist-sidebar" aria-label="音樂人選單"><input class="search" id="artistSearch" type="search" placeholder="搜尋音樂人、歌曲、專輯…" aria-label="搜尋音樂人、歌曲或專輯"><div id="artistList" class="artist-list"></div><p id="artistEmpty" class="artist-empty" hidden>沒有符合的音樂人，換個關鍵字試試。</p></aside><div id="artistDetail" class="artist-detail"></div></div></section>
+<section id="connections" class="panel" role="tabpanel" aria-labelledby="tab-connections" tabindex="0" hidden><header class="connections-intro"><div class="eyebrow">03 / Where the edges dissolve</div><h2>邊界，慢慢融化。</h2><p>同樣的空靈，可能來自完全不同的創作方式。<br>把相近的名字放在一起，聽見它們重疊與分岔的地方。</p></header><div class="map">
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 01</div><div class="connection-line" aria-hidden="true"></div><h3>Dream Pop ↔ Ambient Pop</h3><p>前者重夢幻質地，後者重空間與聲響延展。CAS 同時踩在兩者之間：吉他、人聲與霧狀的空氣，形成同一個夢境。</p></article>
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 02</div><div class="connection-line" aria-hidden="true"></div><h3>Bedroom Pop ↔ Indie Pop</h3><p>前者連著居家 DIY 與私密美學，後者連著更廣的獨立音樂傳統。早期 Clairo 是清楚的交會點，後期作品則走向更豐富的製作。</p></article>
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 03</div><div class="connection-line" aria-hidden="true"></div><h3>Synth-pop ↔ Electropop</h3><p>前者凸顯合成器的核心角色，後者強調電子製作的流行歌曲。兩者大量重疊，不宜直接以復古與現代切開。</p></article>
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 04</div><div class="connection-line" aria-hidden="true"></div><h3>Ambient ↔ Ambient Pop</h3><p>Ambient 可以沒有主唱、副歌或清楚旋律；Ambient Pop 保留歌曲骨架。坂本龍一的部分氛圍作品，因此與 CAS 有空間感的共鳴，也有形式上的差異。</p></article>
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 05</div><div class="connection-line" aria-hidden="true"></div><h3>Jazz Pop ↔ Traditional Pop</h3><p>前者描述爵士與流行的融合，後者指向特定歌曲與演唱傳統。Laufey 把當代心事帶進兩者之間，但復古不等於爵士，爵士也不必然復古。</p></article>
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 06</div><div class="connection-line" aria-hidden="true"></div><h3>都會律動 ↔ 私密夜色</h3><p>HYBS、Daniel Caesar 與 Joji 都可能柔和而親密，節拍與和聲卻各有重心。前者常更輕盈，Daniel Caesar 偏溫潤的 Soul，Joji 常帶灰暗的電子顆粒感。</p></article>
+</div><div class="listening-path glow-card"><span class="eyebrow">你的聽感路線</span><div class="path-stops"><span>親密的人聲</span><i aria-hidden="true"></i><span>柔軟的律動</span><i aria-hidden="true"></i><span>朦朧的空間</span><i aria-hidden="true"></i><span>有故事的風景</span></div><p class="collection-note">這是一條可以穿過曲風的路線：從 Clairo、Babygirl，到 HYBS、CAS，再走向 AURORA、坂本龍一與 Evan Call。</p></div></section>
+<details class="references"><summary>閱讀筆記與資料來源</summary><div class="sources">
+<a href="https://www.allmusic.com/artist/cigarettes-after-sex-mn0003569044" target="_blank" rel="noopener">CAS · AllMusic ↗</a><a href="https://www.allmusic.com/artist/clairo-mn0003716129/biography" target="_blank" rel="noopener">Clairo · AllMusic ↗</a><a href="https://www.thelaufeyfoundation.org/about" target="_blank" rel="noopener">Laufey Foundation ↗</a><a href="https://www.allmusic.com/artist/daniel-caesar-mn0003180014" target="_blank" rel="noopener">Daniel Caesar · AllMusic ↗</a><a href="https://www.allmusic.com/artist/aurora-mn0003357903" target="_blank" rel="noopener">AURORA · AllMusic ↗</a><a href="https://www.allmusic.com/artist/joji-mn0001064208" target="_blank" rel="noopener">Joji · AllMusic ↗</a><a href="https://www.allmusic.com/artist/ryuchi-sakamoto-mn0000587608" target="_blank" rel="noopener">坂本龍一 · AllMusic ↗</a><a href="https://miraclebus.com/composer/evancall" target="_blank" rel="noopener">Evan Call · 官方資料 ↗</a><a href="https://open.spotify.com/artist/4mr4X9nJC8DPlNukWbgAaI" target="_blank" rel="noopener">HYBS · Spotify ↗</a><a href="https://babygirl1994.bandcamp.com/" target="_blank" rel="noopener">Babygirl · Bandcamp ↗</a></div><p>版本資料查核：2026.10.15。黑膠推薦以作品內容與你的聽感偏好為依據，並非壓片音質排名；售價、庫存及運送地區以連結商店為準。每組的收藏推薦附發行或零售資料。曲風與畫面比喻為編輯整理，單一標籤不能概括音樂人的全部作品。</p></details>
+<footer><span>霧裡聽見 / POP ATLAS</span><span>讓耳朵先感受，再讓名字慢慢靠近。</span></footer><div class="sr-only" id="pageStatus" aria-live="polite"></div>
+</main><script>const genres=[
+['Dream Pop','夢幻流行','texture','像醒來前，還沒散去的夢。','以朦朧、漂浮的聲音質地為核心，常見殘響吉他、層疊合成器，以及融入樂器的人聲。它可以緩慢，也可以有鮮明節奏。','Cigarettes After Sex・Beach House','夢感 / 殘響 / 朦朧'],
+['Bedroom Pop','臥室流行','culture','像翻開一頁只給自己看的日記。','源於居家 DIY 錄製與網路發表的創作環境，也形成私密、直接、不過度修飾的美學。不是所有臥室錄音都屬於它，作品也不一定低傳真。','早期 Clairo','DIY / 私密 / 日常'],
+['Ambient Pop','氛圍流行','texture','旋律還在，房間已被霧填滿。','把氛圍音樂的聲響延展、留白與空間感帶進流行歌曲。節拍可能退到背景，但仍保留旋律、人聲或可辨認的歌曲結構。','Cigarettes After Sex','包覆 / 留白 / 延展'],
+['City Pop','城市流行','culture','夜車向前，霓虹在玻璃上流動。','通常指日本 1970 年代末至 1980 年代與都市生活美學相連的一批流行音樂，融合 Funk、Soul、Disco、爵士與 Soft Rock；並非單一固定節奏。','竹內瑪莉亞・山下達郎・松原美紀','都會 / 律動 / 復古'],
+['Indie Pop','獨立流行','culture','用自己的語氣，唱一首好記的歌。','源自獨立音樂文化與發行脈絡的流行音樂傳統，後來也形成風格稱呼。重視旋律與個人特色，可以粗糙，也可以製作得非常精緻。','Clairo・HYBS・Babygirl','旋律 / 個性 / 獨立脈絡'],
+['Art Pop','藝術流行','fusion','一首歌，也是一座有想法的世界。','在流行歌曲裡加入藝術概念、實驗音色、特別的結構或跨領域表達。可以戲劇化，也可以極簡；不是單純指編曲複雜或比較高級。','AURORA','概念 / 實驗 / 戲劇性'],
+['Synth-pop','合成器流行','texture','合成器點亮一片電子夜色。','以合成器作為旋律、和聲或貝斯的主要角色，常搭配鼓機。與 1970 年代末、1980 年代的電子流行發展關係密切，也持續影響當代作品。','AURORA 部分作品・YMO 相關脈絡','合成器 / 鼓機 / 電子旋律'],
+['Electropop','電子流行','texture','讓電子聲響直接碰到情緒。','以電子製作為核心的流行歌曲，常見合成音色、電子節拍與加工人聲。與 Synth-pop 大量重疊，並沒有一致且絕對的分界。','AURORA 部分作品','電子製作 / 節拍 / 音色'],
+['Jazz Pop','爵士流行','fusion','燈光暖下來，和聲轉了一個彎。','融合爵士和聲、節奏、配器或演唱語彙與流行歌曲寫法。可能帶搖擺、Bossa Nova，也可能是簡潔抒情歌；不一定以長篇即興為主。','Laufey','爵士和聲 / 細膩 / 浪漫'],
+['Traditional Pop','傳統流行','culture','一段旋律，把人帶回老電影。','連結搖滾成為主流之前的流行歌曲與演唱傳統，重視旋律、歌詞與詮釋，常見管弦樂或大樂團。當代歌手也能延續這種傳統。','Laufey 的重要參照方向','經典歌曲 / 演唱 / 管弦編曲'],
+['Alternative Pop','另類流行','fusion','熟悉的流行輪廓，長出陌生的邊。','涵蓋與主流流行慣例保持一些距離的創作。可能體現在音色、結構、態度或美學上，是寬廣的傘狀標籤，沒有一種固定聲音。','AURORA・Joji 部分作品','個性 / 非典型 / 廣泛分類'],
+['Folk Pop','民謠流行','fusion','把故事放進旋律，讓木頭發聲。','將民謠敘事、原聲樂器或根源音樂元素與流行旋律結合。可以只有人聲木吉他，也可以加入完整樂團、弦樂或電子製作。','Clairo 部分作品・AURORA 的民謠元素','敘事 / 原聲 / 自然']];
+const artists=[
+['Cigarettes After Sex','黑白夜色裡，一場緩慢的夢。',['Dream Pop','Ambient Pop','Slowcore'],'殘響吉他、克制的鼓與輕柔人聲，共同維持一種低溫而親密的氛圍。歌聲常融進樂器，讓浪漫與孤寂懸在同一片空間裡。','Apocalypse / Nothing’s Gonna Hurt You Baby','與 Dream Pop、Ambient Pop 的交會最直接。'],
+['Clairo','房間、日記，與日常的小小波動。',['Bedroom Pop','Indie Pop','Folk / Soft Rock'],'早期以居家錄音的親近感受到注意；後續作品逐漸走向更豐富的樂團、民謠、Soft Rock 與 Soul 色彩。Bedroom Pop 是理解她的起點，並非全部。','Pretty Girl / Bags / Amoeba','聽早期與後期作品，可以感受分類如何隨創作改變。'],
+['Laufey','把今天的心事，唱進一部老電影。',['Jazz Pop','Traditional Pop','Bossa Nova 元素'],'以爵士與古典背景連結當代歌曲，常用細膩和聲、弦樂與復古演唱氣質呈現戀愛心事。她的夢幻感不等同 Dream Pop 的朦朧聲牆。','From The Start / Let You Break My Heart Again','較適合從 Jazz Pop 與 Traditional Pop 的交會理解。'],
+['Daniel Caesar','溫暖的人聲，靠近一點。',['Alternative R&B','Neo-Soul'],'柔軟律動、細緻和聲與帶福音影響的情感表達，讓歌曲兼具私密與靈魂樂的溫度。即使空靈，創作重心仍在 R&B／Soul。','Get You / Best Part / Japanese Denim','和 HYBS、Joji 可比較律動、聲線與情緒的不同。'],
+['AURORA','冷空氣裡，歌聲向森林展開。',['Art Pop','Electropop','Folk 元素'],'清亮人聲、層疊和聲與電子聲響，時而脆弱、時而奔放。自然、神話與儀式般的聽感，常讓她的空靈比臥室流行更開闊。','Runaway / Running with the Wolves','有夢感，但不能因此把整體創作都歸入 Dream Pop。'],
+['Joji','凌晨醒著，情緒緩緩下沉。',['Alternative R&B','Downtempo','Lo-fi 元素'],'以 R&B、嘻哈節拍與帶顆粒感的電子聲響構成陰鬱空間。早期私密而粗糙的美學與 Bedroom Pop 有交集，作品也包含精緻流行與鋼琴抒情歌。','Will He / SLOW DANCING IN THE DARK / Glimpse of Us','與 Daniel Caesar 共享 R&B 脈絡，情緒表面常更灰暗。'],
+['坂本龍一','一個琴音，讓時間顯出形狀。',['Electronic','Ambient','鋼琴 / 電影配樂'],'創作橫跨 YMO 的電子流行、電影配樂、鋼琴與實驗聲響。部分後期作品特別重視聲音的衰減、環境與留白，也有旋律鮮明的代表作。','Merry Christmas Mr. Lawrence / Energy Flow / andata','Ambient 不等於 Ambient Pop；不能用一類概括其生涯。'],
+['Evan Call','音樂帶你走過風景，也走過告別。',['管弦配樂','Folk 元素','動畫 / 影視原聲'],'在《紫羅蘭永恆花園》《葬送的芙莉蓮》等配樂中，以旋律與配器描寫人物、回憶與旅程。《芙莉蓮》也運用民俗與古樂器音色塑造世界。','Theme of Violet Evergarden / Journey of a Lifetime','主要是配樂創作者；敘事與畫面感能連結你的流行歌喜好。'],
+['HYBS','暖色傍晚，身體輕輕晃動。',['Indie Pop','Pop / R&B'],'柔軟人聲、俐落吉他與鬆弛律動，形成輕盈又帶曖昧的氣氛。有些作品讓人聯想到 City Pop 的都會與復古感，核心仍更適合放在 Indie Pop／R&B。','Ride / Dancing with my phone / Tip Toe','比 CAS 更有前進的律動，比 Joji 常顯得明亮輕盈。'],
+['Babygirl','旋律甜甜的，心情卻酸酸的。',['Indie Pop / Rock','Dream Pop 質地','Bubblegum Emo'],'加拿大雙人組，以柔和人聲、流行旋律與帶失落感的吉他寫青春心事。自稱 bubblegum emo，抓住了甜美表面與惆悵內裡的組合。','I Wish I Never Met You / You Were in My Dream Last Night','和 Clairo 共享親密感，也保留更鮮明的吉他樂團輪廓。']];
+
+const library = [
+{tracks:[['Apocalypse','Cigarettes After Sex · 2017'],['K.','Cigarettes After Sex · 2017'],['Nothing’s Gonna Hurt You Baby','I. · 2012'],['Heavenly','Cry · 2019']],albums:[['Cigarettes After Sex','2017 · 專輯','第一張就足以建立整個黑白夢境。'],['Cry','2019 · 專輯','把緩慢、私密與夜色延伸得更深。'],["X’s",'2024 · 專輯','在熟悉的音色裡，加入更直接的流行旋律。']],vinyl:['Cigarettes After Sex','2017 · 標準黑膠 LP','如果只收一張，我會先選同名首專。〈K.〉、〈Apocalypse〉、〈Sunsetz〉連著聽，最能感受這支樂團維持一整張氣氛的能力。','〈Nothing’s Gonna Hurt You Baby〉收在早期 EP《I.》，不在這張專輯。','https://cigarettesaftersex.bandcamp.com/merch','樂團官方 Bandcamp'],color:'#aba9c5'},
+{tracks:[['Pretty Girl','2017 · 單曲'],['Bags','Immunity · 2019'],['Amoeba','Sling · 2021'],['Juna','Charm · 2024']],albums:[['Immunity','2019 · 專輯','從臥室美學走向完整樂團製作的入口。'],['Sling','2021 · 專輯','更內省，聲音轉向民謠與細緻配器。'],['Charm','2024 · 專輯','溫暖的 Soul、爵士色彩與柔軟律動。']],vinyl:['Charm','2024 · 標準黑膠 LP','依你喜歡的朦朧、鬆弛與親密感，我會先收《Charm》。它的樂器層次與連貫氛圍，適合坐下來完整聽一面。','若最愛〈Bags〉，可以改從《Immunity》開始；〈Pretty Girl〉不在這三張專輯內。','https://www.banquetrecords.com/clairo/charm/2287053','Banquet Records · 版本資料'],color:'#c5ab88'},
+{tracks:[['From The Start','Bewitched · 2023'],['Promise','Bewitched · 2023'],['Let You Break My Heart Again','2021 · 單曲'],['Goddess','Bewitched: The Goddess Edition · 2024']],albums:[['Everything I Know About Love','2022 · 專輯','戀愛心事、爵士語彙與柔軟的流行旋律。'],['Bewitched','2023 · 專輯','弦樂與復古演唱氣質更完整地展開。'],['Bewitched: The Goddess Edition','2024 · 擴充版專輯','以原專輯為基礎，再加入四首歌曲。']],vinyl:['Bewitched: The Goddess Edition','2024 · Navy 2LP','作為第一張 Laufey 黑膠，擴充版兼具〈From The Start〉、〈Promise〉與〈Goddess〉，能把她細膩與強烈的兩面放在一起聽。','原版《Bewitched》與 Goddess Edition 曲目不同；下單時確認是你想要的版本。','https://store.laufeymusic.com/collections/albums','Laufey 官方商店'],color:'#a0b1cb'},
+{tracks:[['Get You','Freudian · 2017'],['Best Part','Freudian · 2017'],['Japanese Denim','2016 · 單曲'],['Always','NEVER ENOUGH · 2023']],albums:[['Freudian','2017 · 專輯','福音和聲、Soul 溫度與私密情歌的核心。'],['CASE STUDY 01','2019 · 專輯','電子、搖滾與 R&B 之間的探索。'],['NEVER ENOUGH','2023 · 專輯','更開闊的音色與成熟的情緒表達。']],vinyl:['Freudian','官方藍膠版本 · Gatefold 包裝','若你是被他的柔和聲線和和聲吸引，《Freudian》最適合作為第一張收藏。〈Get You〉與〈Best Part〉也都在其中。','官方有藍膠發行紀錄；供貨需以商店為準。〈Japanese Denim〉不在本專輯內。','https://shop.danielcaesar.com/products/freudian-blue-2lp-vinyl','Daniel Caesar 官方商店'],color:'#7b9fba'},
+{tracks:[['Runaway','All My Demons Greeting Me as a Friend · 2016'],['Running with the Wolves','2015 · EP／2016 · 首專'],['The Seed','A Different Kind of Human (Step 2) · 2019'],['Cure for Me','The Gods We Can Touch · 2022']],albums:[['All My Demons Greeting Me as a Friend','2016 · 專輯','從脆弱與森林般空氣感進入她的世界。'],['The Gods We Can Touch','2022 · 專輯','神話意象與更鮮明的流行、舞曲節奏。'],['What Happened to the Heart?','2024 · 專輯','把身體、自然與情感推向更大的聲音空間。']],vinyl:['All My Demons Greeting Me as a Friend','2016 · 原專輯黑膠版','首專收進〈Runaway〉與〈Running with the Wolves〉，很適合你喜歡的空靈、自然與夢境感。先從這張理解她的聲音根源。','購買原專輯版本時，留意不要與另行發行的 The Moth Tapes 混淆。','https://shop.aurora-music.com/collections/music/products/all-my-demons-greeting-me-as-a-friend-vinyl','AURORA 官方商店'],color:'#a7bca5'},
+{tracks:[['SLOW DANCING IN THE DARK','BALLADS 1 · 2018'],['Sanctuary','Nectar · 2020'],['Run','Nectar · 2020'],['Glimpse of Us','SMITHEREENS · 2022']],albums:[['BALLADS 1','2018 · 專輯','顆粒感、陰鬱與早期 R&B 情緒。'],['Nectar','2020 · 專輯','把朦朧聲響推向更完整的流行編曲。'],['SMITHEREENS','2022 · 專輯','短而集中的失落感，含〈Glimpse of Us〉。']],vinyl:['Nectar','2020 專輯 · 標準 2LP','若偏愛氛圍與編曲層次，我會先選《Nectar》。〈Ew〉、〈Sanctuary〉與〈Run〉讓陰鬱、浪漫和電子感輪流浮上來。','〈SLOW DANCING IN THE DARK〉與〈Glimpse of Us〉各在其他專輯；依最愛的歌選片更有意義。','https://www.turntablelab.com/products/joji-nectar-vinyl-lp','Turntable Lab · 版本資料'],color:'#bd838d'},
+{tracks:[['Merry Christmas Mr. Lawrence','同名電影原聲 · 1983'],['Energy Flow','1999 · 單曲'],['Bibo no Aozora','Smoochy · 1995'],['andata','async · 2017']],albums:[['1996','1996 · 鋼琴三重奏專輯','用鋼琴、小提琴與大提琴重新看見代表作品。'],['async','2017 · 專輯','從旋律走向聲響、環境與時間感。'],['12','2023 · 專輯','節制的鋼琴、合成器與生活痕跡。']],vinyl:['async','Milan Records · 2LP 版本','以你的迷霧、抽象與空間感偏好，我會先收《async》。它適合把注意力交給聲音的邊緣、呼吸與消散，而不是只等待熟悉旋律。','這不是經典旋律精選。如果更愛鋼琴與室內樂，可先聽《1996》再決定收藏方向。','https://www.sonymusic.com.tw/album/ryuichi-sakamoto-async-2lp/','台灣 Sony Music · 發行資料'],color:'#9eaaa9'},
+{tracks:[['Theme of Violet Evergarden','Violet Evergarden: Automemories · 2018'],['Across the Violet Sky','Violet Evergarden: Automemories · 2018'],['The Voice in My Heart','Violet Evergarden: Automemories · 2018'],['Journey of a Lifetime','葬送的芙莉蓮 原聲帶 · 2024']],albums:[['Violet Evergarden: Automemories','2018 · 電視動畫原聲帶','情感細節與管弦敘事的代表入口。'],['Josee, the Tiger and the Fish','2020 · 電影原聲帶','溫柔的日常，逐步走向明亮與成長。'],['Frieren: Beyond Journey’s End','2024 · 電視動畫原聲帶','民俗樂器、旅途與時間流逝的風景。']],vinyl:['Violet Evergarden: Automemories','Anime Limited / All The Anime · 黑膠 3LP','如果想把情緒與故事一起收藏，我會選這套。從人物主題到場景配樂，三片裝保留了系列原聲帶的完整旅程。','確認是 Automemories 電視版原聲帶；電影、外傳與 Deluxe 包裝是不同品項。','https://www.alltheanime.com/products/violet-evergarden-automemories-original-soundtrack-vinyl','發行商 All The Anime'],color:'#b0a0c5'},
+{tracks:[['Ride','Making Steak · 2022'],['Dancing with my phone','Making Steak · 2022'],['Killer','Making Steak · 2022'],['Tip Toe','WELL DONE · 2024']],albums:[['Making Steak','2022 · 專輯','輕盈 R&B、吉他與午後律動的完整起點。'],['WELL DONE','2024 · EP','更濃的合成器色彩，收錄〈Tip Toe〉。']],vinyl:['Making Steak','已發行黑膠 LP · 多種彩膠版本','〈Ride〉、〈Dancing with my phone〉與〈Killer〉集中在同一張，最能代表 HYBS 溫暖、鬆弛又帶律動的魅力。','版本連結為綠／藍大理石紋 180g、45rpm LP。〈Tip Toe〉收在《WELL DONE》，不在這張。','https://m.yes24.com/goods/detail/171559378','YES24 · 版本與曲目資料'],color:'#89b9a8'},
+{tracks:[['I Wish I Never Met You','2021 · 單曲'],['You Were in My Dream Last Night','Losers Weepers · 2021'],['Sore Eyes','Be Still My Heart · 2023'],['Dancing With Her',"Stay Here Where It’s Warm · 2025"]],albums:[['Losers Weepers','2021 · EP','甜美旋律與青春失落感的精巧組合。'],['Be Still My Heart','2023 · EP','吉他流行的輪廓與酸甜情緒更鮮明。'],["Stay Here Where It’s Warm",'2025 · 專輯','從早期 EP 走向完整長篇的收藏入口。']],vinyl:["Stay Here Where It’s Warm",'2025 · 官方 12 吋橘色 LP','我會以這張正式長篇作為 Babygirl 的黑膠起點。它提供一段完整的聆聽時間，也讓你把早期喜歡的單曲和後來的創作放在一起比較。','官方 Bandcamp 列有橘膠、印刷內袋與數位專輯；早期 EP 的歌曲不會因此全部收進來。','https://babygirl1994.bandcamp.com/album/stay-here-where-its-warm','Babygirl 官方 Bandcamp'],color:'#c6a08d'}
+];
+
+// Distinct records, ordered by fit with the listener's atmosphere-first preferences.
+// Dates refer to the album unless the pressing or expanded edition is specified.
+const additionalVinyl = [
+  [
+    ['Cry','2019 · 黑膠 LP','第二張沿著首專的夜色繼續往裡走。喜歡〈Heavenly〉裡柔軟的人聲與緩慢推進，可以把這張當作更私密的一面。','與同名首專風格相近，適合已確定喜歡這種步調的人。版本連結列有標準黑膠。','https://cigarettesaftersex.bandcamp.com/album/cry','樂團官方 Bandcamp'],
+    ["X’s",'2024 · 標準 140g 黑膠 LP','第三張補上更鮮明的旋律與節拍。〈Tejano Blue〉和〈Dark Vacay〉讓熟悉的朦朧感，多了一點流動與溫度。','同頁另有 Deluxe 版本；先按曲目與包裝偏好選擇，再核對版本。','https://cigarettesaftersex.bandcamp.com/album/xs','樂團官方 Bandcamp']
+  ],
+  [
+    ['Immunity','2019 · 黑膠 LP','想收藏〈Bags〉與〈Sofia〉，第二張就選它。它保留青春的私密感，也把臥室流行推向更完整的樂團聲音。','適合從熟悉的單曲走進整張作品；〈Pretty Girl〉不在這張專輯。','https://shop.thefader.com/products/clairo-immunity-lp-vinyl','FADER 官方商店'],
+    ['Sling','2021 專輯 · 週年粉膠 LP','第三張留給安靜的時候。木質樂器與細緻配器更靠近民謠，〈Amoeba〉之外，也值得順著整張的內省情緒慢慢聽。','連結為 2026 週年粉膠版，附 Gatefold 包裝；2021 是原專輯年份。','https://clairo.com/collections/merch/products/sling-vinyl-anniversary','Clairo 官方商店']
+  ],
+  [
+    ['Everything I Know About Love','2022 · Cream 色黑膠 LP','第二張回到更青澀、貼近生活的戀愛心事。它和《Bewitched》的華麗弦樂形成對照，適合喜歡她說故事時親密口吻的人。','官方 Cream 版本可作為選版參考；〈Let You Break My Heart Again〉是另行發行的單曲。','https://store.laufeymusic.com/products/everything-i-know-about-love-cream-vinyl','Laufey 官方商店'],
+    ['A Matter of Time: The Final Hour','2026 擴充版 · Watercolor 2LP','第三張延伸到《A Matter of Time》的世界。喜歡她把不安、期待與浪漫放進復古編曲，可以透過擴充版接著聽下去。','原專輯於 2025 年發行；這個 2026 擴充版共 19 曲，包含四首新增歌曲，附 16 頁冊。','https://store.laufeymusic.com/products/a-matter-of-time-the-final-hour-watercolor-vinyl','Laufey 官方商店']
+  ],
+  [
+    ['NEVER ENOUGH','2023 · 黑膠 2LP','第二張推薦給喜歡空間感與成熟情緒的人。從〈Always〉到〈Toronto 2014〉，人聲和編曲的留白很適合延續你偏愛的深夜氣氛。','此連結為標準雙黑膠版本；完整聆聽的篇幅比《Freudian》更長。','https://www.turntablelab.com/products/daniel-caesar-never-enough-vinyl-2lp','Turntable Lab · 版本資料'],
+    ['CASE STUDY 01','2019 · 黑膠 LP','第三張用來探索更跳躍的聲音。電子、吉他與 R&B 的交錯，比《Freudian》更有轉折；也可以先從與 Brandy 合作的〈Love Again〉開始。','適合喜歡他的聲音、也想聽見不同製作方向的人。','https://www.newburycomics.com/products/daniel_caesar-case_study_01_lp','Newbury Comics · 版本資料']
+  ],
+  [
+    ['The Gods We Can Touch','2022 · 黑膠 2LP／替代曲目版','第二張把森林般的空靈，帶進神話與更鮮明的節奏。若你喜歡〈Cure for Me〉的律動，這張能補足首專之外的另一種 AURORA。','官方這款黑膠採替代曲目表，含〈The Woman I Am〉與〈The Devil Is Human〉，與標準數位版不同。','https://shop.aurora-music.com/collections/the-gods-we-can-touch/products/the-gods-we-can-touch-vinyl-2lp','AURORA 官方商店'],
+    ['What Happened to the Heart?','2024 · 140g 黑膠 2LP','第三張適合想把情緒放大的人。自然、身體與內心的連結被拉到更寬的聲音空間，和首專的脆弱感形成有趣的前後對照。','所附為官方雙黑膠版本；偏好安靜與輕柔時，可以先從首專開始。','https://shop.aurora-music.com/products/what-happened-to-the-heart-2lp','AURORA 官方商店']
+  ],
+  [
+    ['BALLADS 1','2018 專輯 · 五週年黑膠 LP','第二張回到更粗糙、陰暗的起點。〈SLOW DANCING IN THE DARK〉在這裡；若你喜歡顆粒感、低傳真與失落的人聲，它甚至可以換到第一順位。','連結為 2023 五週年發行版本；2018 是原專輯年份。','https://www.turntablelab.com/products/joji-ballads-1-5th-anniversary-vinyl-lp','Turntable Lab · 版本資料'],
+    ['SMITHEREENS','2022 專輯 · 黑膠 LP','第三張把情緒收得更短、更集中。〈Glimpse of Us〉是明確的收藏理由，也適合想在《Nectar》之外保留一段安靜失落的人。','原專輯於 2022 年發行，黑膠版於 2023 年推出；整張篇幅較短。','https://www.roughtrade.com/en-us/product/joji/smithereens','Rough Trade · 版本資料']
+  ],
+  [
+    ['1996','30 週年再版 · Milan 2LP · 預購','第二張換一種親近他的方式。鋼琴、小提琴與大提琴把熟悉的旋律重新打開；喜歡〈Merry Christmas Mr. Lawrence〉的旋律感，可以從這張開始。','原專輯為 1996 年。查核時，所附 30 週年雙黑膠頁面仍標示預購，交貨日期以店家為準。','https://www.strangerthanparadiserecords.com/ryuichi-sakamoto-1996.html','Stranger Than Paradise · 版本資料'],
+    ['12','2023 · Milan 透明黑膠 2LP','第三張留給願意慢下來的人。節制的鋼琴、合成器與聲音之間的空隙，讓整張像一段安靜的日記，適合延伸《async》的聆聽耐心。','連結為透明雙黑膠版本；這張以聲音與時間感取勝，並非經典旋律合集。','https://blackscreenrecords.com/products/ryuichi-sakamoto-12','Black Screen Records · 版本資料']
+  ],
+  [
+    ['Josee, the Tiger and the Fish','2020 電影原聲 · 彩膠 2LP','第二套走進較明亮的日常。細膩的旋律與逐漸展開的管弦樂，讓溫柔、成長與勇氣有了連續的情緒線，適合喜歡故事感的人。','連結為 2022 年發行的綠松石／白色飛濺彩膠，雙片皆為 180g，附 12 頁冊。','https://www.alltheanime.com/products/josee-the-tiger-and-the-fish-variant-vinyl','發行商 All The Anime'],
+    ['My Happy Marriage','第一季電視原聲 · 黑膠 3LP','第三套把浪漫放進更細密的情感變化。若你被 Evan Call 描寫人物內心的方式吸引，可以接著聽這部作品裡的柔軟與戲劇張力。','這套對應 2023 年動畫第一季，黑膠於 2025 年推出；請核對季別與包裝。','https://www.alltheanime.com/products/my-happy-marriage-vinyl','發行商 All The Anime']
+  ],
+  [
+    ['WELL DONE','2024 EP · 2025 Fantasy 彩膠 12 吋','第二張就是補齊〈Tip Toe〉的選擇。六首歌裡的合成器與輕盈節拍，把《Making Steak》的午後感推向更繽紛的夜晚。','所附為 Earthtone 於 2025 年推出的 Fantasy 彩膠版本；EP 年份與壓片年份不同。','https://www.earthtonerecordsstore.com/en/product/1232685/WELLDONE2025','Earthtone Records · 發行資料']
+  ],
+  []
+];
+library.forEach((entry,index)=>{
+  entry.vinyls=[entry.vinyl,...additionalVinyl[index]];
+  delete entry.vinyl;
+});
+library[2].albums[2]=['A Matter of Time','2025 · 專輯','把復古浪漫延伸至時間與不安；2026 年另有 The Final Hour 擴充版。'];
+library[7].albums.push(['My Happy Marriage','2023 · 第一季電視動畫原聲帶','以細膩的管弦樂描寫人物的情感變化。']);
+library[9].collectionNote='目前僅核對到這張正式黑膠。上方兩張 EP 可以接著聽，暫不列入黑膠排行。';
+
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+let paused = reducedMotion.matches;
+let currentPage = 'genres';
+let filter = 'all', genrePage = 0, selectedArtist = 0;
+const genrePageSize = 6;
+const pageNames = { genres:'曲風', artists:'音樂人', connections:'交會' };
+
+function filteredGenres() {
+  const q = $('#genreSearch').value.trim().toLowerCase();
+  return genres.map((data,index)=>({data,index})).filter(({data}) =>
+    (filter === 'all' || data[2] === filter) && data.join(' ').toLowerCase().includes(q));
+}
+function renderGenres() {
+  const items = filteredGenres(), pages = Math.max(1,Math.ceil(items.length / genrePageSize));
+  genrePage = Math.min(genrePage, pages-1);
+  $('#genreGrid').innerHTML = items.slice(genrePage*genrePageSize,(genrePage+1)*genrePageSize).map(({data:g,index},i) => `
+    <article class="card glow-card" style="--order:${i}">
+      <div class="num">SOUND / ${String(index+1).padStart(2,'0')}</div><h3>${escapeHtml(g[1])}</h3>
+      <div class="en">${escapeHtml(g[0])}</div><div class="scene">${escapeHtml(g[3])}</div><p>${escapeHtml(g[4])}</p>
+      <span class="label">聆聽座標</span><p>${escapeHtml(g[5])}</p>
+      <div class="tags">${g[6].split(' / ').map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
+    </article>`).join('');
+  $('#genreEmpty').hidden = items.length !== 0;
+  $('#genrePagination').hidden = items.length === 0;
+  $('#genreCount').textContent = `${String(genrePage+1).padStart(2,'0')} / ${String(pages).padStart(2,'0')} · ${items.length} 種曲風`;
+  $('#genrePrev').disabled = genrePage === 0;
+  $('#genreNext').disabled = genrePage === pages-1;
+}
+$('#genreSearch').addEventListener('input',()=>{genrePage=0;renderGenres()});
+$$('[data-filter]').forEach(b=>b.addEventListener('click',()=>{
+  filter=b.dataset.filter;genrePage=0;
+  $$('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  renderGenres();
+}));
+function turnGenrePage(delta) {
+  genrePage+=delta;renderGenres();
+  $('#genreCatalog').scrollIntoView({behavior:paused?'instant':'smooth',block:'start'});
+}
+$('#genrePrev').addEventListener('click',()=>turnGenrePage(-1));
+$('#genreNext').addEventListener('click',()=>turnGenrePage(1));
+// CSS controls the fade on entry/exit; pointer coordinates only position the light.
+document.addEventListener('pointermove',e=>{
+  if(paused||e.pointerType==='touch')return;
+  const card=e.target?.closest?.('.glow-card');if(!card)return;
+  const r=card.getBoundingClientRect();
+  card.style.setProperty('--cx',`${e.clientX-r.left}px`);
+  card.style.setProperty('--cy',`${e.clientY-r.top}px`);
+},{passive:true});
+
+function filteredArtists() {
+  const q=$('#artistSearch').value.trim().toLowerCase();
+  return artists.map((a,i)=>i).filter(i=>[...artists[i],JSON.stringify(library[i])].join(' ').toLowerCase().includes(q));
+}
+function renderArtistList() {
+  const list=filteredArtists();
+  $('#artistList').innerHTML=list.map(i=>`<button type="button" class="artist-choice" data-artist="${i}" aria-pressed="${i===selectedArtist}" aria-controls="artistDetail"><span class="index">${String(i+1).padStart(2,'0')}</span><span>${escapeHtml(artists[i][0])}</span></button>`).join('');
+  $('#artistEmpty').hidden=list.length!==0;
+}
+function renderVinylPick(v,i) {
+  const rank=String(i+1).padStart(2,'0');
+  const labels=['必收首選','第二張收藏','延伸探索'];
+  return `<li class="vinyl-entry glow-card${i===0?' vinyl-featured':''}">
+    <div class="rank-head"><span class="rank-number" aria-label="收藏順位 ${i+1}">${rank}</span><span class="rank-label">${labels[i]||'繼續收藏'}</span><span class="rank-caption" aria-hidden="true">${i===0?'START HERE':'NEXT ON THE SHELF'}</span></div>
+    <div class="vinyl-body">
+      ${i===0?'<div class="record-wrap" aria-hidden="true"><div class="record"></div><div class="record-label"><span>POP ATLAS</span></div></div>':''}
+      <div class="vinyl-copy"><h4>${escapeHtml(v[0])}</h4><div class="format">${escapeHtml(v[1])}</div><p>${escapeHtml(v[2])}</p><p class="buy-note">${escapeHtml(v[3])}</p><a class="source-link" href="${escapeHtml(v[4])}" target="_blank" rel="noopener">${escapeHtml(v[5])} ↗</a></div>
+    </div>
+  </li>`;
+}
+function renderArtistDetail() {
+  const a=artists[selectedArtist],d=library[selectedArtist];
+  $('#artistDetail').style.setProperty('--artist-color',d.color);
+  $('#artistDetail').innerHTML=`
+    <header class="artist-banner"><div class="eyebrow">ARTIST / ${String(selectedArtist+1).padStart(2,'0')}</div>
+      <h2 tabindex="-1" id="artistHeading">${escapeHtml(a[0])}</h2><div class="tags">${a[2].map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
+      <div class="scene">${escapeHtml(a[1])}</div><p>${escapeHtml(a[3])}</p><p class="bridge">${escapeHtml(a[5])}</p>
+    </header>
+    <section class="detail-section" aria-labelledby="tracksHeading"><div class="detail-title"><h3 id="tracksHeading">經典與入門曲</h3><span>START LISTENING</span></div>
+      <div class="track-grid">${d.tracks.map((t,i)=>`<div class="track glow-card"><span class="track-num">${String(i+1).padStart(2,'0')}</span><div><strong>${escapeHtml(t[0])}</strong><small>${escapeHtml(t[1])}</small></div></div>`).join('')}</div>
+    </section>
+    <section class="detail-section" aria-labelledby="albumsHeading"><div class="detail-title"><h3 id="albumsHeading">代表專輯與 EP</h3><span>GO A LITTLE DEEPER</span></div>
+      <div class="album-list">${d.albums.map(t=>`<article class="album glow-card"><strong>${escapeHtml(t[0])}</strong><small>${escapeHtml(t[1])}</small><p>${escapeHtml(t[2])}</p></article>`).join('')}</div>
+    </section>
+    <section class="detail-section collection-section" aria-labelledby="vinylHeading">
+      <div class="detail-title"><h3 id="vinylHeading">黑膠收藏排行</h3><span>YOUR COLLECTION ORDER</span><span class="collection-count">${String(d.vinyls.length).padStart(2,'0')} 張作品</span></div>
+      <p class="ranking-intro">以你喜歡的朦朧、親密與空間感，排出從第一張到下一張的收藏順序。</p>
+      <ol class="vinyl-ranking" role="list">${d.vinyls.map(renderVinylPick).join('')}</ol>
+      ${d.collectionNote?`<p class="catalogue-note">${escapeHtml(d.collectionNote)}</p>`:''}
+      <p class="collection-note">這是聽感偏好的收藏順位，並非銷量或壓片音質排名。每張附已查核的版本資料，庫存、售價與交貨以商店為準。唱片圖形為示意。</p>
+    </section>`;
+  $('#artistDetail').getAnimations?.().forEach(a=>a.cancel());
+  if(!paused)$('#artistDetail').animate?.([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:450,easing:'ease-out'});
+}
+$('#artistList').addEventListener('click',e=>{
+  const b=e.target.closest('[data-artist]');if(!b)return;
+  selectedArtist=Number(b.dataset.artist);
+  // Keep the selected button in the DOM so keyboard focus remains stable.
+  $$('.artist-choice').forEach(x=>x.setAttribute('aria-pressed',String(Number(x.dataset.artist)===selectedArtist)));
+  renderArtistDetail();
+  $('#pageStatus').textContent=`已選擇 ${artists[selectedArtist][0]}`;
+  if(window.innerWidth<=720){$('#artistHeading').focus({preventScroll:true});$('#artistDetail').scrollIntoView({behavior:paused?'instant':'smooth',block:'start'});}
+});
+$('#artistSearch').addEventListener('input',()=>{
+  const list=filteredArtists();
+  if(list.length&&!list.includes(selectedArtist)){selectedArtist=list[0];renderArtistDetail()}
+  renderArtistList();
+});
+
+function setPage(id, options={}) {
+  if(!pageNames[id])id='genres';
+  const changed=currentPage!==id;currentPage=id;
+  $$('.panel').forEach(p=>p.hidden=p.id!==id);
+  $$('[data-page]').forEach(b=>{const active=b.dataset.page===id;b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1});
+  if(options.history&&location.hash!==`#${id}`)history.pushState(null,'',`#${id}`);
+  if(options.scroll)window.scrollTo({top:0,behavior:'instant'});
+  if(changed)$('#pageStatus').textContent=`已切換至${pageNames[id]}分頁`;
+  fogState?.update();
+}
+$$('[data-page]').forEach(b=>b.addEventListener('click',()=>setPage(b.dataset.page,{history:true,scroll:true})));
+$('.dock').addEventListener('keydown',e=>{
+  const tabs=$$('[data-page]'),index=tabs.indexOf(document.activeElement);
+  if(index<0)return;
+  let next=index;
+  if(e.key==='ArrowRight')next=(index+1)%tabs.length;
+  else if(e.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;
+  else if(e.key==='Home')next=0;
+  else if(e.key==='End')next=tabs.length-1;
+  else return;
+  e.preventDefault();tabs[next].focus();setPage(tabs[next].dataset.page,{history:true,scroll:true});
+});
+$('[data-home]').addEventListener('click',e=>{e.preventDefault();setPage('genres',{history:true,scroll:true})});
+window.addEventListener('popstate',()=>setPage(location.hash.slice(1),{scroll:true}));
+window.addEventListener('hashchange',()=>setPage(location.hash.slice(1),{scroll:true}));
+
+// Viewport-wide smoke field: procedural texture, displaced particles, fading clear trails.
+// No remote images, shaders or libraries are required for the interaction.
+let fogState=null;
+function createMist() {
+  const hero=$('#mistHero'),canvas=$('#mistCanvas'),textTargets=$$('[data-mist-text]'),ctx=canvas.getContext('2d');
+  if(!ctx)return {update(){},drawStatic(){}};
+  const pointer={x:-999,y:-999,clientX:-999,clientY:-999,active:false};
+  let width=1,height=1,dpr=1,raf=0,last=0,time=0,heroVisible=false;
+  const trails=[],particles=[];
+  const rand=(a,b)=>a+Math.random()*(b-a);
+  function hash(x,y,seed){let n=Math.sin(x*127.1+y*311.7+seed*67.13)*43758.5453;return n-Math.floor(n)}
+  function noise(x,y,seed){const ix=Math.floor(x),iy=Math.floor(y);let u=x-ix,v=y-iy;u=u*u*(3-2*u);v=v*v*(3-2*v);return (hash(ix,iy,seed)*(1-u)+hash(ix+1,iy,seed)*u)*(1-v)+(hash(ix,iy+1,seed)*(1-u)+hash(ix+1,iy+1,seed)*u)*v}
+  function makeSprite(seed){
+    const s=document.createElement('canvas');s.width=s.height=160;
+    const c=s.getContext('2d'),im=c.createImageData(160,160);
+    for(let y=0;y<160;y++)for(let x=0;x<160;x++){
+      let n=0,amp=.56,freq=3.2;
+      for(let o=0;o<4;o++){n+=noise(x/160*freq,y/160*freq,seed+o*6)*amp;freq*=2;amp*=.5}
+      const dx=(x-80)/80,dy=(y-80)/80,rad=Math.sqrt(dx*dx+dy*dy);
+      const edge=Math.pow(Math.max(0,1-rad),1.25),alpha=edge*Math.max(0,(n-.2)*2.3);
+      const k=(y*160+x)*4;
+      im.data[k]=137+Math.floor(n*32);im.data[k+1]=130+Math.floor(n*30);im.data[k+2]=155+Math.floor(n*37);im.data[k+3]=Math.min(255,alpha*255);
+    }c.putImageData(im,0,0);return s;
+  }
+  const sprites=[makeSprite(3),makeSprite(19),makeSprite(43)];
+  function resize(){
+    const r=canvas.getBoundingClientRect();if(!r.width||!r.height)return;
+    width=r.width;height=r.height;dpr=Math.min(window.devicePixelRatio||1,1.5);
+    canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
+    particles.length=0;
+    const count=width<600?24:36;
+    for(let i=0;i<count;i++)particles.push({u:rand(-.12,1.1),v:rand(.05,.96),x:rand(0,width),y:rand(0,height),vx:0,vy:0,r:rand(160,310)*(width<600?.72:1),phase:rand(0,Math.PI*2),speed:rand(.22,.7),opacity:rand(.3,.65),sprite:i%3,rotation:rand(0,6.28)});
+    particles.forEach(p=>{p.x=p.u*width;p.y=p.v*height});draw(false,0);
+  }
+  function draw(advance,dt){
+    ctx.clearRect(0,0,width,height);ctx.globalCompositeOperation='source-over';
+    for(const p of particles){
+      const homeX=p.u*width+Math.sin(time*.24*p.speed+p.phase)*70;
+      const homeY=p.v*height+Math.cos(time*.31*p.speed+p.phase)*45;
+      if(advance){
+        p.vx+=(homeX-p.x)*.00065*dt;p.vy+=(homeY-p.y)*.00065*dt;
+        if(pointer.active){const dx=p.x-pointer.x,dy=p.y-pointer.y,dist=Math.hypot(dx,dy),radius=230;
+          if(dist<radius){const force=(1-dist/radius)*1.1;p.vx+=dx/Math.max(dist,1)*force*dt;p.vy+=dy/Math.max(dist,1)*force*dt}}
+        p.vx*=Math.pow(.965,dt);p.vy*=Math.pow(.965,dt);p.x+=p.vx*dt;p.y+=p.vy*dt;
+      }
+      const breathing=1+Math.sin(time*.35+p.phase)*.12;
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rotation+time*.012*p.speed);ctx.scale(1.4,1);
+      ctx.globalAlpha=p.opacity*(.8+.2*Math.sin(time*.4+p.phase));const size=p.r*breathing;
+      ctx.drawImage(sprites[p.sprite],-size,-size,size*2,size*2);ctx.restore();
+    }
+    ctx.globalCompositeOperation='destination-out';
+    // Wide, asymmetric falloff keeps the clearing from looking like a circular cut-out.
+    function dissolve(x,y,radius,strength,angle,stretch){
+      ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.scale(stretch,1);
+      const g=ctx.createRadialGradient(-radius*.08,radius*.03,0,0,0,radius);
+      [[0,.85],[.18,.66],[.38,.38],[.60,.15],[.80,.035],[1,0]].forEach(([stop,alpha])=>g.addColorStop(stop,`rgba(0,0,0,${alpha*strength})`));
+      ctx.globalAlpha=1;ctx.fillStyle=g;ctx.fillRect(-radius,-radius,radius*2,radius*2);ctx.restore();
+    }
+    for(let i=trails.length-1;i>=0;i--){const t=trails[i];if(advance)t.life-=dt*.008;
+      if(t.life<=0){trails.splice(i,1);continue}
+      dissolve(t.x,t.y,230,.10*t.life,-.24,1.15);
+    }
+    if(pointer.active){
+      dissolve(pointer.x,pointer.y,285,.88,Math.sin(time*.3)*.16,1.12);
+      dissolve(pointer.x+45+Math.sin(time*.5)*18,pointer.y-34,220,.24,-.55,.85);
+    }
+    ctx.globalCompositeOperation='source-over';ctx.globalAlpha=1;
+  }
+  function tick(now){raf=0;if(paused||document.hidden)return;
+    const dt=Math.min((now-(last||now))/16.67,2);last=now;time+=dt/60;draw(true,dt);raf=requestAnimationFrame(tick);
+  }
+  function update(){
+    canvas.style.setProperty('--mist-opacity',heroVisible&&currentPage==='genres'?'.72':'.48');
+    updateTextReveal();
+    const shouldRun=!paused&&!document.hidden;
+    if(shouldRun&&!raf){last=0;raf=requestAnimationFrame(tick)}else if(!shouldRun&&raf){cancelAnimationFrame(raf);raf=0}
+  }
+  function updateTextReveal(){
+    const revealing=!paused&&pointer.active&&currentPage==='genres';
+    for(const target of textTargets){
+      if(revealing){
+        const r=target.getBoundingClientRect();
+        target.style.setProperty('--tx',`${pointer.clientX-r.left}px`);
+        target.style.setProperty('--ty',`${pointer.clientY-r.top}px`);
+      }
+      target.style.setProperty('--reveal',revealing?'1':'0');
+    }
+  }
+  function move(e){if(paused||e.isPrimary===false)return;
+    const r=canvas.getBoundingClientRect();pointer.clientX=e.clientX;pointer.clientY=e.clientY;
+    pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;pointer.active=true;updateTextReveal();
+    const lastTrail=trails[trails.length-1];if(!lastTrail||Math.hypot(lastTrail.x-pointer.x,lastTrail.y-pointer.y)>14){trails.push({x:pointer.x,y:pointer.y,life:1});if(trails.length>16)trails.shift()}
+  }
+  function leave(){pointer.active=false;updateTextReveal()}
+  document.addEventListener('pointermove',move,{passive:true});
+  document.addEventListener('pointerdown',move,{passive:true});
+  document.addEventListener('pointerleave',leave);
+  document.addEventListener('pointercancel',leave);
+  document.addEventListener('pointerup',e=>{if(e.pointerType!=='mouse')leave()});
+  window.addEventListener('blur',leave);
+  window.addEventListener('scroll',updateTextReveal,{passive:true});
+  new ResizeObserver(resize).observe(canvas);
+  new IntersectionObserver(entries=>{heroVisible=entries[0].isIntersecting;update()},{threshold:.01}).observe(hero);
+  document.addEventListener('visibilitychange',update);
+  resize();
+  return {update,drawStatic(){leave();draw(false,0)}};
+}
+function applyMotion(){
+  document.body.classList.toggle('pause-motion',paused);
+  const b=$('#motionToggle');b.setAttribute('aria-pressed',String(paused));b.setAttribute('aria-label',paused?'開啟動畫':'暫停動畫');b.textContent=paused?'動態暫停':'動態開啟';
+  fogState?.update();if(paused)fogState?.drawStatic();
+}
+$('#motionToggle').addEventListener('click',()=>{paused=!paused;applyMotion()});
+reducedMotion.addEventListener('change',e=>{paused=e.matches;applyMotion()});
+if(matchMedia('(pointer:fine)').matches){window.addEventListener('pointermove',e=>{if(!paused)$('.cursor-glow').style.transform=`translate(${e.clientX-275}px,${e.clientY-275}px)`},{passive:true})}
+renderGenres();renderArtistList();renderArtistDetail();
+fogState=createMist();applyMotion();
+setPage(location.hash.slice(1)||'genres');
+</script></body></html>
