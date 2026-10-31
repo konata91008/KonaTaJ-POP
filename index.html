@@ -138,22 +138,20 @@ footer{font-size:calc(9px + 2.5pt)}
   #connections .path-stops span{font-size:16px}
 }
 
-/* Soft filament connections, 2026-10-31. */
-.connection-wave{width:204px;max-width:100%;height:56px;margin:8px 0 10px;pointer-events:none;mask-image:none;-webkit-mask-image:none}
+/* Flowing light filaments: the curves themselves travel, 2026-10-31. */
+.connection-wave{width:176px;max-width:100%;height:46px;margin:8px 0 10px;pointer-events:none;mask-image:none;-webkit-mask-image:none}
 .connection-wave svg{display:block;width:100%;height:100%;overflow:visible}
-.filament-field{transform-box:view-box;transform-origin:120px 32px;animation:filamentDrift var(--wave-period,10s) var(--wave-phase,0s) ease-in-out infinite}
 .filament-thread{fill:none;stroke-linecap:round;stroke-linejoin:round}
 .filament-haze{stroke-width:5;opacity:.045}
-.filament-aura{stroke-width:2.4;opacity:.12}
-.filament-core{stroke-width:.7;opacity:.82}
-.filament-echo{stroke-width:.65;opacity:.34;animation:filamentGlimmer 7s var(--wave-phase,0s) ease-in-out infinite}
-@keyframes filamentDrift{0%,100%{transform:scaleY(.94);opacity:.86}37%{transform:scaleY(1.035);opacity:1}71%{transform:scaleY(.98);opacity:.92}}
-@keyframes filamentGlimmer{0%,100%{opacity:.2}43%{opacity:.48}76%{opacity:.3}}
-.light-motion .filament-field{animation-duration:18s}
-.light-motion .filament-echo{animation:none;opacity:.32}
-.pause-motion .filament-field,.pause-motion .filament-echo{animation:none}
-@media(prefers-reduced-motion:reduce){.filament-field,.filament-echo{animation:none}}
-@media(max-width:720px){.connection-wave{width:180px;height:50px}}
+.filament-aura{stroke-width:2.6;opacity:.11}
+.filament-core{stroke-width:.95;opacity:.78}
+.filament-echo{stroke-width:.8;opacity:.46}
+.filament-glint{stroke-width:1.2;stroke-dasharray:12 88;opacity:.6}
+.filament-tip{opacity:.34}
+.light-motion .filament-haze{display:none}
+.pause-motion .filament-glint{opacity:.3}
+@media(prefers-reduced-motion:reduce){.filament-glint{opacity:.3}}
+@media(max-width:720px){.connection-wave{width:160px;height:42px}}
 
 /* Clear liquid glass: a transparent surface, refracted backdrop and local reflections. */
 .dock{--dock-index:0;--glass-x:28%;--glass-y:0%;--dock-inset:6px;isolation:isolate;padding:var(--dock-inset);border:1px solid transparent;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 12px 32px #02040b24,0 3px 9px #0000000d;overflow:visible}
@@ -299,120 +297,120 @@ footer .mist-ink,footer .mist-soft,footer .mist-clear{margin:0}
 </section>
 <section id="artists" class="panel" role="tabpanel" aria-labelledby="tab-artists" tabindex="0" hidden><div class="section-head compact"><div><div class="eyebrow">02 / The listening room</div><h2>不同的內在風景</h2></div><p>選一位音樂人，從經典曲走進整張專輯。<br>沿著收藏排行，慢慢建立自己的黑膠架。</p></div><div class="artist-layout"><aside class="artist-sidebar" aria-label="音樂人選單"><input class="search" id="artistSearch" type="search" placeholder="搜尋音樂人、歌曲、專輯…" aria-label="搜尋音樂人、歌曲或專輯"><div class="artist-scroll-frame"><div id="artistList" class="artist-list"></div><div class="artist-scroll-edge artist-scroll-edge-top" aria-hidden="true"><i style="--dust-x:14%;--dust-size:1.2px;--dust-dx:-5px;--dust-dy:-16px;--dust-duration:5.60s;--dust-delay:-0.00s"></i><i style="--dust-x:29%;--dust-size:1.5px;--dust-dx:7px;--dust-dy:-21px;--dust-duration:6.05s;--dust-delay:-1.37s"></i><i style="--dust-x:43%;--dust-size:1.8px;--dust-dx:-9px;--dust-dy:-26px;--dust-duration:6.50s;--dust-delay:-2.74s"></i><i style="--dust-x:59%;--dust-size:1.2px;--dust-dx:6px;--dust-dy:-16px;--dust-duration:6.95s;--dust-delay:-4.11s"></i><i style="--dust-x:74%;--dust-size:1.5px;--dust-dx:-4px;--dust-dy:-21px;--dust-duration:7.40s;--dust-delay:-5.48s"></i><i style="--dust-x:87%;--dust-size:1.8px;--dust-dx:8px;--dust-dy:-26px;--dust-duration:7.85s;--dust-delay:-6.85s"></i></div><div class="artist-scroll-edge artist-scroll-edge-bottom" aria-hidden="true"><i style="--dust-x:14%;--dust-size:1.2px;--dust-dx:-5px;--dust-dy:16px;--dust-duration:5.60s;--dust-delay:-0.00s"></i><i style="--dust-x:29%;--dust-size:1.5px;--dust-dx:7px;--dust-dy:21px;--dust-duration:6.05s;--dust-delay:-1.37s"></i><i style="--dust-x:43%;--dust-size:1.8px;--dust-dx:-9px;--dust-dy:26px;--dust-duration:6.50s;--dust-delay:-2.74s"></i><i style="--dust-x:59%;--dust-size:1.2px;--dust-dx:6px;--dust-dy:16px;--dust-duration:6.95s;--dust-delay:-4.11s"></i><i style="--dust-x:74%;--dust-size:1.5px;--dust-dx:-4px;--dust-dy:21px;--dust-duration:7.40s;--dust-delay:-5.48s"></i><i style="--dust-x:87%;--dust-size:1.8px;--dust-dx:8px;--dust-dy:26px;--dust-duration:7.85s;--dust-delay:-6.85s"></i></div></div><p id="artistEmpty" class="artist-empty" hidden>沒有符合的音樂人，換個關鍵字試試。</p></aside><div id="artistDetail" class="artist-detail"></div></div></section>
 <section id="connections" class="panel" role="tabpanel" aria-labelledby="tab-connections" tabindex="0" hidden><header class="connections-intro"><div class="eyebrow">03 / Where the edges dissolve</div><h2>邊界，慢慢融化。</h2><p>同樣的空靈，可能來自完全不同的創作方式。<br>把相近的名字放在一起，聽見它們重疊與分岔的地方。</p></header><div class="map">
-<article class="map-item glow-card"><div class="map-index">CONNECTION / 01</div><div class="connection-wave" aria-hidden="true" style="--wave-period:9.80s;--wave-phase:-0.0s"><svg viewBox="0 0 240 64" focusable="false">
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 01</div><div class="connection-wave" aria-hidden="true"><svg viewBox="0 0 240 64" focusable="false">
 <defs>
-  <linearGradient id="filament-0-thread" x1="14" y1="18" x2="226" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".94"/><stop offset=".48" stop-color="#f4efff" stop-opacity=".7"/><stop offset="1" stop-color="#fffaff" stop-opacity=".94"/></linearGradient>
-  <radialGradient id="filament-0-halo"><stop stop-color="#fff8ff" stop-opacity=".48"/><stop offset=".18" stop-color="#eee4ff" stop-opacity=".25"/><stop offset=".46" stop-color="#d9c4ee" stop-opacity=".08"/><stop offset=".74" stop-color="#c6a7eb" stop-opacity=".02"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
-  <radialGradient id="filament-0-tip"><stop stop-color="#fffaff" stop-opacity=".88"/><stop offset=".24" stop-color="#fffaff" stop-opacity=".6"/><stop offset=".58" stop-color="#f0e5ff" stop-opacity=".16"/><stop offset="1" stop-color="#e7d4fa" stop-opacity="0"/></radialGradient>
-  <linearGradient id="filament-0-fan" x1="12" y1="18" x2="49" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".08"/><stop offset=".09" stop-color="#fffaff" stop-opacity=".52"/><stop offset=".35" stop-color="#f3eaff" stop-opacity=".15"/><stop offset="1" stop-color="#e8dafa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-0-thread" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".12" stop-color="#c6a7eb" stop-opacity=".6"/><stop offset=".43" stop-color="#ece1ff" stop-opacity=".95"/><stop offset=".7" stop-color="#c6b0e5" stop-opacity=".78"/><stop offset=".9" stop-color="#c6a7eb" stop-opacity=".5"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-0-echo" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".25" stop-color="#bca5dc" stop-opacity=".75"/><stop offset=".68" stop-color="#b6c9cc" stop-opacity=".8"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="filament-0-halo"><stop stop-color="#dec9f8" stop-opacity=".45"/><stop offset=".25" stop-color="#c6a7eb" stop-opacity=".16"/><stop offset=".65" stop-color="#c6a7eb" stop-opacity=".035"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
+  <path id="filament-0-curve" class="filament-shape" pathLength="100" d="M14.00 32.00 Q22.83 33.39 27.25 34.47 Q31.67 35.55 36.08 36.65 Q40.50 37.76 44.92 38.61 Q49.33 39.47 53.75 39.94 Q58.17 40.41 62.58 40.49 Q67.00 40.57 71.42 40.32 Q75.83 40.07 80.25 39.58 Q84.67 39.08 89.08 38.35 Q93.50 37.62 97.92 36.64 Q102.33 35.65 106.75 34.35 Q111.17 33.05 115.58 31.43 Q120.00 29.81 124.42 27.97 Q128.83 26.14 133.25 24.32 Q137.67 22.50 142.08 21.03 Q146.50 19.55 150.92 18.74 Q155.33 17.93 159.75 18.00 Q164.17 18.07 168.58 19.05 Q173.00 20.03 177.42 21.71 Q181.83 23.38 186.25 25.35 Q190.67 27.32 195.08 29.09 Q199.50 30.87 203.92 32.02 Q208.33 33.16 212.75 33.41 Q217.17 33.66 221.58 32.83 T226.00 32.00"/>
 </defs>
 <g class="filament-field">
-  <path d="M14 18 C82 8 153 55 226 46 C154 50 83 21 14 18Z" fill="url(#filament-0-thread)" opacity=".09"/>
-  <g stroke="url(#filament-0-thread)"><path class="filament-thread filament-haze" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-aura" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-echo" d="M14 18 C88 5 152 60 226 46"/><path class="filament-thread filament-core" d="M14 18 C82 16 153 48 226 46"/></g>
-  <g><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-0-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-0-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-0-tip)"/></g>
-  <g transform="translate(240 64) rotate(180)"><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-0-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-0-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-0-tip)"/></g>
+  <g stroke="url(#filament-0-thread)"><use class="filament-thread filament-haze" href="#filament-0-curve"/><use class="filament-thread filament-aura" href="#filament-0-curve"/><use class="filament-thread filament-core" href="#filament-0-curve"/></g>
+  <path class="filament-thread filament-echo" stroke="url(#filament-0-echo)" d="M14.00 32.00 Q22.83 34.24 27.25 35.50 Q31.67 36.75 36.08 37.86 Q40.50 38.96 44.92 39.56 Q49.33 40.16 53.75 40.01 Q58.17 39.86 62.58 38.88 Q67.00 37.89 71.42 36.15 Q75.83 34.42 80.25 32.20 Q84.67 29.99 89.08 27.66 Q93.50 25.34 97.92 23.31 Q102.33 21.29 106.75 19.90 Q111.17 18.52 115.58 17.99 Q120.00 17.47 124.42 17.84 Q128.83 18.21 133.25 19.35 Q137.67 20.49 142.08 22.14 Q146.50 23.78 150.92 25.62 Q155.33 27.46 159.75 29.17 Q164.17 30.88 168.58 32.22 Q173.00 33.56 177.42 34.40 Q181.83 35.24 186.25 35.57 Q190.67 35.89 195.08 35.77 Q199.50 35.65 203.92 35.22 Q208.33 34.78 212.75 34.16 Q217.17 33.54 221.58 32.77 T226.00 32.00"/>
+  <use class="filament-thread filament-glint" href="#filament-0-curve" stroke="url(#filament-0-thread)" stroke-dashoffset="0"/>
+  <g class="filament-tip" fill="url(#filament-0-halo)"><ellipse cx="14" cy="32" rx="17" ry="10"/><ellipse cx="226" cy="32" rx="17" ry="10"/></g>
 </g></svg></div><h3>Dream Pop ↔ Ambient Pop</h3><p>前者重夢幻質地，後者重空間與聲響延展。CAS 同時踩在兩者之間：吉他、人聲與霧狀的空氣，形成同一個夢境。</p></article>
-<article class="map-item glow-card"><div class="map-index">CONNECTION / 02</div><div class="connection-wave" aria-hidden="true" style="--wave-period:10.45s;--wave-phase:-1.4s"><svg viewBox="0 0 240 64" focusable="false">
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 02</div><div class="connection-wave" aria-hidden="true"><svg viewBox="0 0 240 64" focusable="false">
 <defs>
-  <linearGradient id="filament-1-thread" x1="14" y1="18" x2="226" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".94"/><stop offset=".48" stop-color="#f4efff" stop-opacity=".7"/><stop offset="1" stop-color="#fffaff" stop-opacity=".94"/></linearGradient>
-  <radialGradient id="filament-1-halo"><stop stop-color="#fff8ff" stop-opacity=".48"/><stop offset=".18" stop-color="#eee4ff" stop-opacity=".25"/><stop offset=".46" stop-color="#d9c4ee" stop-opacity=".08"/><stop offset=".74" stop-color="#c6a7eb" stop-opacity=".02"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
-  <radialGradient id="filament-1-tip"><stop stop-color="#fffaff" stop-opacity=".88"/><stop offset=".24" stop-color="#fffaff" stop-opacity=".6"/><stop offset=".58" stop-color="#f0e5ff" stop-opacity=".16"/><stop offset="1" stop-color="#e7d4fa" stop-opacity="0"/></radialGradient>
-  <linearGradient id="filament-1-fan" x1="12" y1="18" x2="49" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".08"/><stop offset=".09" stop-color="#fffaff" stop-opacity=".52"/><stop offset=".35" stop-color="#f3eaff" stop-opacity=".15"/><stop offset="1" stop-color="#e8dafa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-1-thread" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".12" stop-color="#c6a7eb" stop-opacity=".6"/><stop offset=".43" stop-color="#ece1ff" stop-opacity=".95"/><stop offset=".7" stop-color="#c6b0e5" stop-opacity=".78"/><stop offset=".9" stop-color="#c6a7eb" stop-opacity=".5"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-1-echo" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".25" stop-color="#bca5dc" stop-opacity=".75"/><stop offset=".68" stop-color="#b6c9cc" stop-opacity=".8"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="filament-1-halo"><stop stop-color="#dec9f8" stop-opacity=".45"/><stop offset=".25" stop-color="#c6a7eb" stop-opacity=".16"/><stop offset=".65" stop-color="#c6a7eb" stop-opacity=".035"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
+  <path id="filament-1-curve" class="filament-shape" pathLength="100" d="M14.00 32.00 Q22.83 31.24 27.25 31.65 Q31.67 32.05 36.08 32.90 Q40.50 33.74 44.92 34.76 Q49.33 35.78 53.75 36.78 Q58.17 37.77 62.58 38.65 Q67.00 39.54 71.42 40.27 Q75.83 41.01 80.25 41.61 Q84.67 42.20 89.08 42.60 Q93.50 43.00 97.92 43.11 Q102.33 43.21 106.75 42.86 Q111.17 42.50 115.58 41.54 Q120.00 40.59 124.42 38.98 Q128.83 37.37 133.25 35.23 Q137.67 33.09 142.08 30.71 Q146.50 28.33 150.92 26.12 Q155.33 23.91 159.75 22.30 Q164.17 20.69 168.58 20.00 Q173.00 19.30 177.42 19.62 Q181.83 19.95 186.25 21.12 Q190.67 22.30 195.08 23.96 Q199.50 25.62 203.92 27.28 Q208.33 28.93 212.75 30.11 Q217.17 31.29 221.58 31.65 T226.00 32.00"/>
 </defs>
 <g class="filament-field">
-  <path d="M14 18 C82 8 153 55 226 46 C154 50 83 21 14 18Z" fill="url(#filament-1-thread)" opacity=".09"/>
-  <g stroke="url(#filament-1-thread)"><path class="filament-thread filament-haze" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-aura" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-echo" d="M14 18 C88 5 152 60 226 46"/><path class="filament-thread filament-core" d="M14 18 C82 16 153 48 226 46"/></g>
-  <g><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-1-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-1-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-1-tip)"/></g>
-  <g transform="translate(240 64) rotate(180)"><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-1-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-1-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-1-tip)"/></g>
+  <g stroke="url(#filament-1-thread)"><use class="filament-thread filament-haze" href="#filament-1-curve"/><use class="filament-thread filament-aura" href="#filament-1-curve"/><use class="filament-thread filament-core" href="#filament-1-curve"/></g>
+  <path class="filament-thread filament-echo" stroke="url(#filament-1-echo)" d="M14.00 32.00 Q22.83 33.22 27.25 34.33 Q31.67 35.44 36.08 36.71 Q40.50 37.97 44.92 39.02 Q49.33 40.07 53.75 40.62 Q58.17 41.17 62.58 41.06 Q67.00 40.95 71.42 40.17 Q75.83 39.38 80.25 38.05 Q84.67 36.73 89.08 35.09 Q93.50 33.46 97.92 31.78 Q102.33 30.11 106.75 28.65 Q111.17 27.19 115.58 26.11 Q120.00 25.04 124.42 24.42 Q128.83 23.80 133.25 23.63 Q137.67 23.46 142.08 23.65 Q146.50 23.83 150.92 24.27 Q155.33 24.71 159.75 25.30 Q164.17 25.89 168.58 26.54 Q173.00 27.20 177.42 27.87 Q181.83 28.54 186.25 29.19 Q190.67 29.84 195.08 30.42 Q199.50 31.01 203.92 31.46 Q208.33 31.91 212.75 32.14 Q217.17 32.36 221.58 32.18 T226.00 32.00"/>
+  <use class="filament-thread filament-glint" href="#filament-1-curve" stroke="url(#filament-1-thread)" stroke-dashoffset="-17"/>
+  <g class="filament-tip" fill="url(#filament-1-halo)"><ellipse cx="14" cy="32" rx="17" ry="10"/><ellipse cx="226" cy="32" rx="17" ry="10"/></g>
 </g></svg></div><h3>Bedroom Pop ↔ Indie Pop</h3><p>前者連著居家 DIY 與私密美學，後者連著更廣的獨立音樂傳統。早期 Clairo 是清楚的交會點，後期作品則走向更豐富的製作。</p></article>
-<article class="map-item glow-card"><div class="map-index">CONNECTION / 03</div><div class="connection-wave" aria-hidden="true" style="--wave-period:11.10s;--wave-phase:-2.8s"><svg viewBox="0 0 240 64" focusable="false">
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 03</div><div class="connection-wave" aria-hidden="true"><svg viewBox="0 0 240 64" focusable="false">
 <defs>
-  <linearGradient id="filament-2-thread" x1="14" y1="18" x2="226" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".94"/><stop offset=".48" stop-color="#f4efff" stop-opacity=".7"/><stop offset="1" stop-color="#fffaff" stop-opacity=".94"/></linearGradient>
-  <radialGradient id="filament-2-halo"><stop stop-color="#fff8ff" stop-opacity=".48"/><stop offset=".18" stop-color="#eee4ff" stop-opacity=".25"/><stop offset=".46" stop-color="#d9c4ee" stop-opacity=".08"/><stop offset=".74" stop-color="#c6a7eb" stop-opacity=".02"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
-  <radialGradient id="filament-2-tip"><stop stop-color="#fffaff" stop-opacity=".88"/><stop offset=".24" stop-color="#fffaff" stop-opacity=".6"/><stop offset=".58" stop-color="#f0e5ff" stop-opacity=".16"/><stop offset="1" stop-color="#e7d4fa" stop-opacity="0"/></radialGradient>
-  <linearGradient id="filament-2-fan" x1="12" y1="18" x2="49" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".08"/><stop offset=".09" stop-color="#fffaff" stop-opacity=".52"/><stop offset=".35" stop-color="#f3eaff" stop-opacity=".15"/><stop offset="1" stop-color="#e8dafa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-2-thread" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".12" stop-color="#c6a7eb" stop-opacity=".6"/><stop offset=".43" stop-color="#ece1ff" stop-opacity=".95"/><stop offset=".7" stop-color="#c6b0e5" stop-opacity=".78"/><stop offset=".9" stop-color="#c6a7eb" stop-opacity=".5"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-2-echo" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".25" stop-color="#bca5dc" stop-opacity=".75"/><stop offset=".68" stop-color="#b6c9cc" stop-opacity=".8"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="filament-2-halo"><stop stop-color="#dec9f8" stop-opacity=".45"/><stop offset=".25" stop-color="#c6a7eb" stop-opacity=".16"/><stop offset=".65" stop-color="#c6a7eb" stop-opacity=".035"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
+  <path id="filament-2-curve" class="filament-shape" pathLength="100" d="M14.00 32.00 Q22.83 29.75 27.25 29.32 Q31.67 28.90 36.08 28.99 Q40.50 29.07 44.92 29.54 Q49.33 30.01 53.75 30.75 Q58.17 31.48 62.58 32.39 Q67.00 33.31 71.42 34.39 Q75.83 35.47 80.25 36.72 Q84.67 37.96 89.08 39.33 Q93.50 40.70 97.92 42.06 Q102.33 43.41 106.75 44.53 Q111.17 45.64 115.58 46.22 Q120.00 46.80 124.42 46.59 Q128.83 46.37 133.25 45.24 Q137.67 44.11 142.08 42.15 Q146.50 40.18 150.92 37.69 Q155.33 35.20 159.75 32.64 Q164.17 30.09 168.58 27.96 Q173.00 25.84 177.42 24.55 Q181.83 23.25 186.25 22.97 Q190.67 22.69 195.08 23.34 Q199.50 23.99 203.92 25.26 Q208.33 26.53 212.75 27.98 Q217.17 29.44 221.58 30.72 T226.00 32.00"/>
 </defs>
 <g class="filament-field">
-  <path d="M14 18 C82 8 153 55 226 46 C154 50 83 21 14 18Z" fill="url(#filament-2-thread)" opacity=".09"/>
-  <g stroke="url(#filament-2-thread)"><path class="filament-thread filament-haze" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-aura" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-echo" d="M14 18 C88 5 152 60 226 46"/><path class="filament-thread filament-core" d="M14 18 C82 16 153 48 226 46"/></g>
-  <g><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-2-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-2-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-2-tip)"/></g>
-  <g transform="translate(240 64) rotate(180)"><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-2-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-2-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-2-tip)"/></g>
+  <g stroke="url(#filament-2-thread)"><use class="filament-thread filament-haze" href="#filament-2-curve"/><use class="filament-thread filament-aura" href="#filament-2-curve"/><use class="filament-thread filament-core" href="#filament-2-curve"/></g>
+  <path class="filament-thread filament-echo" stroke="url(#filament-2-echo)" d="M14.00 32.00 Q22.83 31.69 27.25 32.13 Q31.67 32.57 36.08 33.33 Q40.50 34.09 44.92 34.96 Q49.33 35.83 53.75 36.62 Q58.17 37.41 62.58 37.99 Q67.00 38.57 71.42 38.89 Q75.83 39.21 80.25 39.27 Q84.67 39.32 89.08 39.16 Q93.50 38.99 97.92 38.64 Q102.33 38.29 106.75 37.78 Q111.17 37.27 115.58 36.61 Q120.00 35.94 124.42 35.11 Q128.83 34.28 133.25 33.31 Q137.67 32.34 142.08 31.27 Q146.50 30.20 150.92 29.13 Q155.33 28.07 159.75 27.15 Q164.17 26.24 168.58 25.63 Q173.00 25.02 177.42 24.84 Q181.83 24.66 186.25 24.96 Q190.67 25.26 195.08 25.99 Q199.50 26.72 203.92 27.71 Q208.33 28.69 212.75 29.67 Q217.17 30.64 221.58 31.32 T226.00 32.00"/>
+  <use class="filament-thread filament-glint" href="#filament-2-curve" stroke="url(#filament-2-thread)" stroke-dashoffset="-34"/>
+  <g class="filament-tip" fill="url(#filament-2-halo)"><ellipse cx="14" cy="32" rx="17" ry="10"/><ellipse cx="226" cy="32" rx="17" ry="10"/></g>
 </g></svg></div><h3>Synth-pop ↔ Electropop</h3><p>前者凸顯合成器的核心角色，後者強調電子製作的流行歌曲。兩者大量重疊，不宜直接以復古與現代切開。</p></article>
-<article class="map-item glow-card"><div class="map-index">CONNECTION / 04</div><div class="connection-wave" aria-hidden="true" style="--wave-period:11.75s;--wave-phase:-4.2s"><svg viewBox="0 0 240 64" focusable="false">
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 04</div><div class="connection-wave" aria-hidden="true"><svg viewBox="0 0 240 64" focusable="false">
 <defs>
-  <linearGradient id="filament-3-thread" x1="14" y1="18" x2="226" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".94"/><stop offset=".48" stop-color="#f4efff" stop-opacity=".7"/><stop offset="1" stop-color="#fffaff" stop-opacity=".94"/></linearGradient>
-  <radialGradient id="filament-3-halo"><stop stop-color="#fff8ff" stop-opacity=".48"/><stop offset=".18" stop-color="#eee4ff" stop-opacity=".25"/><stop offset=".46" stop-color="#d9c4ee" stop-opacity=".08"/><stop offset=".74" stop-color="#c6a7eb" stop-opacity=".02"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
-  <radialGradient id="filament-3-tip"><stop stop-color="#fffaff" stop-opacity=".88"/><stop offset=".24" stop-color="#fffaff" stop-opacity=".6"/><stop offset=".58" stop-color="#f0e5ff" stop-opacity=".16"/><stop offset="1" stop-color="#e7d4fa" stop-opacity="0"/></radialGradient>
-  <linearGradient id="filament-3-fan" x1="12" y1="18" x2="49" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".08"/><stop offset=".09" stop-color="#fffaff" stop-opacity=".52"/><stop offset=".35" stop-color="#f3eaff" stop-opacity=".15"/><stop offset="1" stop-color="#e8dafa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-3-thread" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".12" stop-color="#c6a7eb" stop-opacity=".6"/><stop offset=".43" stop-color="#ece1ff" stop-opacity=".95"/><stop offset=".7" stop-color="#c6b0e5" stop-opacity=".78"/><stop offset=".9" stop-color="#c6a7eb" stop-opacity=".5"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-3-echo" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".25" stop-color="#bca5dc" stop-opacity=".75"/><stop offset=".68" stop-color="#b6c9cc" stop-opacity=".8"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="filament-3-halo"><stop stop-color="#dec9f8" stop-opacity=".45"/><stop offset=".25" stop-color="#c6a7eb" stop-opacity=".16"/><stop offset=".65" stop-color="#c6a7eb" stop-opacity=".035"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
+  <path id="filament-3-curve" class="filament-shape" pathLength="100" d="M14.00 32.00 Q22.83 29.76 27.25 28.88 Q31.67 28.00 36.08 27.37 Q40.50 26.74 44.92 26.38 Q49.33 26.02 53.75 25.93 Q58.17 25.83 62.58 26.01 Q67.00 26.19 71.42 26.70 Q75.83 27.21 80.25 28.14 Q84.67 29.07 89.08 30.49 Q93.50 31.91 97.92 33.77 Q102.33 35.64 106.75 37.77 Q111.17 39.90 115.58 41.96 Q120.00 44.02 124.42 45.61 Q128.83 47.20 133.25 47.94 Q137.67 48.68 142.08 48.35 Q146.50 48.02 150.92 46.64 Q155.33 45.26 159.75 43.10 Q164.17 40.94 168.58 38.46 Q173.00 35.99 177.42 33.72 Q181.83 31.45 186.25 29.84 Q190.67 28.23 195.08 27.53 Q199.50 26.84 203.92 27.05 Q208.33 27.27 212.75 28.20 Q217.17 29.13 221.58 30.56 T226.00 32.00"/>
 </defs>
 <g class="filament-field">
-  <path d="M14 18 C82 8 153 55 226 46 C154 50 83 21 14 18Z" fill="url(#filament-3-thread)" opacity=".09"/>
-  <g stroke="url(#filament-3-thread)"><path class="filament-thread filament-haze" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-aura" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-echo" d="M14 18 C88 5 152 60 226 46"/><path class="filament-thread filament-core" d="M14 18 C82 16 153 48 226 46"/></g>
-  <g><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-3-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-3-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-3-tip)"/></g>
-  <g transform="translate(240 64) rotate(180)"><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-3-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-3-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-3-tip)"/></g>
+  <g stroke="url(#filament-3-thread)"><use class="filament-thread filament-haze" href="#filament-3-curve"/><use class="filament-thread filament-aura" href="#filament-3-curve"/><use class="filament-thread filament-core" href="#filament-3-curve"/></g>
+  <path class="filament-thread filament-echo" stroke="url(#filament-3-echo)" d="M14.00 32.00 Q22.83 30.67 27.25 30.30 Q31.67 29.93 36.08 29.79 Q40.50 29.64 44.92 29.72 Q49.33 29.79 53.75 30.12 Q58.17 30.46 62.58 31.07 Q67.00 31.69 71.42 32.59 Q75.83 33.50 80.25 34.66 Q84.67 35.82 89.08 37.12 Q93.50 38.43 97.92 39.70 Q102.33 40.97 106.75 41.99 Q111.17 43.01 115.58 43.55 Q120.00 44.09 124.42 43.98 Q128.83 43.87 133.25 43.04 Q137.67 42.22 142.08 40.76 Q146.50 39.30 150.92 37.42 Q155.33 35.53 159.75 33.53 Q164.17 31.53 168.58 29.77 Q173.00 28.01 177.42 26.79 Q181.83 25.57 186.25 25.09 Q190.67 24.61 195.08 24.90 Q199.50 25.18 203.92 26.08 Q208.33 26.98 212.75 28.21 Q217.17 29.44 221.58 30.72 T226.00 32.00"/>
+  <use class="filament-thread filament-glint" href="#filament-3-curve" stroke="url(#filament-3-thread)" stroke-dashoffset="-51"/>
+  <g class="filament-tip" fill="url(#filament-3-halo)"><ellipse cx="14" cy="32" rx="17" ry="10"/><ellipse cx="226" cy="32" rx="17" ry="10"/></g>
 </g></svg></div><h3>Ambient ↔ Ambient Pop</h3><p>Ambient 可以沒有主唱、副歌或清楚旋律；Ambient Pop 保留歌曲骨架。坂本龍一的部分氛圍作品，因此與 CAS 有空間感的共鳴，也有形式上的差異。</p></article>
-<article class="map-item glow-card"><div class="map-index">CONNECTION / 05</div><div class="connection-wave" aria-hidden="true" style="--wave-period:12.40s;--wave-phase:-5.6s"><svg viewBox="0 0 240 64" focusable="false">
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 05</div><div class="connection-wave" aria-hidden="true"><svg viewBox="0 0 240 64" focusable="false">
 <defs>
-  <linearGradient id="filament-4-thread" x1="14" y1="18" x2="226" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".94"/><stop offset=".48" stop-color="#f4efff" stop-opacity=".7"/><stop offset="1" stop-color="#fffaff" stop-opacity=".94"/></linearGradient>
-  <radialGradient id="filament-4-halo"><stop stop-color="#fff8ff" stop-opacity=".48"/><stop offset=".18" stop-color="#eee4ff" stop-opacity=".25"/><stop offset=".46" stop-color="#d9c4ee" stop-opacity=".08"/><stop offset=".74" stop-color="#c6a7eb" stop-opacity=".02"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
-  <radialGradient id="filament-4-tip"><stop stop-color="#fffaff" stop-opacity=".88"/><stop offset=".24" stop-color="#fffaff" stop-opacity=".6"/><stop offset=".58" stop-color="#f0e5ff" stop-opacity=".16"/><stop offset="1" stop-color="#e7d4fa" stop-opacity="0"/></radialGradient>
-  <linearGradient id="filament-4-fan" x1="12" y1="18" x2="49" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".08"/><stop offset=".09" stop-color="#fffaff" stop-opacity=".52"/><stop offset=".35" stop-color="#f3eaff" stop-opacity=".15"/><stop offset="1" stop-color="#e8dafa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-4-thread" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".12" stop-color="#c6a7eb" stop-opacity=".6"/><stop offset=".43" stop-color="#ece1ff" stop-opacity=".95"/><stop offset=".7" stop-color="#c6b0e5" stop-opacity=".78"/><stop offset=".9" stop-color="#c6a7eb" stop-opacity=".5"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-4-echo" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".25" stop-color="#bca5dc" stop-opacity=".75"/><stop offset=".68" stop-color="#b6c9cc" stop-opacity=".8"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="filament-4-halo"><stop stop-color="#dec9f8" stop-opacity=".45"/><stop offset=".25" stop-color="#c6a7eb" stop-opacity=".16"/><stop offset=".65" stop-color="#c6a7eb" stop-opacity=".035"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
+  <path id="filament-4-curve" class="filament-shape" pathLength="100" d="M14.00 32.00 Q22.83 31.17 27.25 30.47 Q31.67 29.77 36.08 28.95 Q40.50 28.13 44.92 27.26 Q49.33 26.39 53.75 25.52 Q58.17 24.66 62.58 23.86 Q67.00 23.06 71.42 22.45 Q75.83 21.84 80.25 21.62 Q84.67 21.40 89.08 21.79 Q93.50 22.17 97.92 23.33 Q102.33 24.48 106.75 26.41 Q111.17 28.33 115.58 30.84 Q120.00 33.35 124.42 36.07 Q128.83 38.78 133.25 41.20 Q137.67 43.63 142.08 45.29 Q146.50 46.95 150.92 47.52 Q155.33 48.10 159.75 47.53 Q164.17 46.95 168.58 45.43 Q173.00 43.91 177.42 41.86 Q181.83 39.80 186.25 37.73 Q190.67 35.66 195.08 34.02 Q199.50 32.39 203.92 31.49 Q208.33 30.60 212.75 30.53 Q217.17 30.46 221.58 31.23 T226.00 32.00"/>
 </defs>
 <g class="filament-field">
-  <path d="M14 18 C82 8 153 55 226 46 C154 50 83 21 14 18Z" fill="url(#filament-4-thread)" opacity=".09"/>
-  <g stroke="url(#filament-4-thread)"><path class="filament-thread filament-haze" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-aura" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-echo" d="M14 18 C88 5 152 60 226 46"/><path class="filament-thread filament-core" d="M14 18 C82 16 153 48 226 46"/></g>
-  <g><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-4-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-4-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-4-tip)"/></g>
-  <g transform="translate(240 64) rotate(180)"><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-4-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-4-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-4-tip)"/></g>
+  <g stroke="url(#filament-4-thread)"><use class="filament-thread filament-haze" href="#filament-4-curve"/><use class="filament-thread filament-aura" href="#filament-4-curve"/><use class="filament-thread filament-core" href="#filament-4-curve"/></g>
+  <path class="filament-thread filament-echo" stroke="url(#filament-4-echo)" d="M14.00 32.00 Q22.83 30.81 27.25 29.96 Q31.67 29.11 36.08 28.13 Q40.50 27.15 44.92 26.24 Q49.33 25.33 53.75 24.74 Q58.17 24.16 62.58 24.13 Q67.00 24.10 71.42 24.77 Q75.83 25.45 80.25 26.86 Q84.67 28.27 89.08 30.28 Q93.50 32.29 97.92 34.62 Q102.33 36.95 106.75 39.22 Q111.17 41.50 115.58 43.32 Q120.00 45.15 124.42 46.19 Q128.83 47.24 133.25 47.32 Q137.67 47.41 142.08 46.52 Q146.50 45.64 150.92 43.98 Q155.33 42.32 159.75 40.21 Q164.17 38.11 168.58 35.97 Q173.00 33.82 177.42 32.03 Q181.83 30.24 186.25 29.08 Q190.67 27.92 195.08 27.53 Q199.50 27.13 203.92 27.46 Q208.33 27.78 212.75 28.65 Q217.17 29.51 221.58 30.76 T226.00 32.00"/>
+  <use class="filament-thread filament-glint" href="#filament-4-curve" stroke="url(#filament-4-thread)" stroke-dashoffset="-68"/>
+  <g class="filament-tip" fill="url(#filament-4-halo)"><ellipse cx="14" cy="32" rx="17" ry="10"/><ellipse cx="226" cy="32" rx="17" ry="10"/></g>
 </g></svg></div><h3>Jazz Pop ↔ Traditional Pop</h3><p>前者描述爵士與流行的融合，後者指向特定歌曲與演唱傳統。Laufey 把當代心事帶進兩者之間，但復古不等於爵士，爵士也不必然復古。</p></article>
-<article class="map-item glow-card"><div class="map-index">CONNECTION / 06</div><div class="connection-wave" aria-hidden="true" style="--wave-period:13.05s;--wave-phase:-7.0s"><svg viewBox="0 0 240 64" focusable="false">
+<article class="map-item glow-card"><div class="map-index">CONNECTION / 06</div><div class="connection-wave" aria-hidden="true"><svg viewBox="0 0 240 64" focusable="false">
 <defs>
-  <linearGradient id="filament-5-thread" x1="14" y1="18" x2="226" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".94"/><stop offset=".48" stop-color="#f4efff" stop-opacity=".7"/><stop offset="1" stop-color="#fffaff" stop-opacity=".94"/></linearGradient>
-  <radialGradient id="filament-5-halo"><stop stop-color="#fff8ff" stop-opacity=".48"/><stop offset=".18" stop-color="#eee4ff" stop-opacity=".25"/><stop offset=".46" stop-color="#d9c4ee" stop-opacity=".08"/><stop offset=".74" stop-color="#c6a7eb" stop-opacity=".02"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
-  <radialGradient id="filament-5-tip"><stop stop-color="#fffaff" stop-opacity=".88"/><stop offset=".24" stop-color="#fffaff" stop-opacity=".6"/><stop offset=".58" stop-color="#f0e5ff" stop-opacity=".16"/><stop offset="1" stop-color="#e7d4fa" stop-opacity="0"/></radialGradient>
-  <linearGradient id="filament-5-fan" x1="12" y1="18" x2="49" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".08"/><stop offset=".09" stop-color="#fffaff" stop-opacity=".52"/><stop offset=".35" stop-color="#f3eaff" stop-opacity=".15"/><stop offset="1" stop-color="#e8dafa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-5-thread" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".12" stop-color="#c6a7eb" stop-opacity=".6"/><stop offset=".43" stop-color="#ece1ff" stop-opacity=".95"/><stop offset=".7" stop-color="#c6b0e5" stop-opacity=".78"/><stop offset=".9" stop-color="#c6a7eb" stop-opacity=".5"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-5-echo" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".25" stop-color="#bca5dc" stop-opacity=".75"/><stop offset=".68" stop-color="#b6c9cc" stop-opacity=".8"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="filament-5-halo"><stop stop-color="#dec9f8" stop-opacity=".45"/><stop offset=".25" stop-color="#c6a7eb" stop-opacity=".16"/><stop offset=".65" stop-color="#c6a7eb" stop-opacity=".035"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
+  <path id="filament-5-curve" class="filament-shape" pathLength="100" d="M14.00 32.00 Q22.83 32.99 27.25 32.96 Q31.67 32.93 36.08 32.56 Q40.50 32.19 44.92 31.50 Q49.33 30.81 53.75 29.81 Q58.17 28.81 62.58 27.51 Q67.00 26.21 71.42 24.70 Q75.83 23.20 80.25 21.71 Q84.67 20.22 89.08 19.07 Q93.50 17.91 97.92 17.43 Q102.33 16.95 106.75 17.42 Q111.17 17.90 115.58 19.41 Q120.00 20.92 124.42 23.32 Q128.83 25.72 133.25 28.63 Q137.67 31.53 142.08 34.41 Q146.50 37.29 150.92 39.60 Q155.33 41.91 159.75 43.27 Q164.17 44.62 168.58 44.85 Q173.00 45.08 177.42 44.31 Q181.83 43.54 186.25 42.10 Q190.67 40.66 195.08 39.00 Q199.50 37.34 203.92 35.89 Q208.33 34.44 212.75 33.49 Q217.17 32.55 221.58 32.28 T226.00 32.00"/>
 </defs>
 <g class="filament-field">
-  <path d="M14 18 C82 8 153 55 226 46 C154 50 83 21 14 18Z" fill="url(#filament-5-thread)" opacity=".09"/>
-  <g stroke="url(#filament-5-thread)"><path class="filament-thread filament-haze" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-aura" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-echo" d="M14 18 C88 5 152 60 226 46"/><path class="filament-thread filament-core" d="M14 18 C82 16 153 48 226 46"/></g>
-  <g><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-5-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-5-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-5-tip)"/></g>
-  <g transform="translate(240 64) rotate(180)"><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-5-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-5-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-5-tip)"/></g>
+  <g stroke="url(#filament-5-thread)"><use class="filament-thread filament-haze" href="#filament-5-curve"/><use class="filament-thread filament-aura" href="#filament-5-curve"/><use class="filament-thread filament-core" href="#filament-5-curve"/></g>
+  <path class="filament-thread filament-echo" stroke="url(#filament-5-echo)" d="M14.00 32.00 Q22.83 31.99 27.25 31.23 Q31.67 30.47 36.08 29.17 Q40.50 27.88 44.92 26.34 Q49.33 24.80 53.75 23.40 Q58.17 21.99 62.58 21.08 Q67.00 20.17 71.42 20.05 Q75.83 19.92 80.25 20.71 Q84.67 21.51 89.08 23.16 Q93.50 24.81 97.92 27.08 Q102.33 29.35 106.75 31.87 Q111.17 34.40 115.58 36.76 Q120.00 39.13 124.42 40.96 Q128.83 42.78 133.25 43.82 Q137.67 44.85 142.08 45.00 Q146.50 45.14 150.92 44.49 Q155.33 43.83 159.75 42.59 Q164.17 41.35 168.58 39.83 Q173.00 38.31 177.42 36.81 Q181.83 35.31 186.25 34.09 Q190.67 32.86 195.08 32.07 Q199.50 31.28 203.92 30.96 Q208.33 30.65 212.75 30.77 Q217.17 30.90 221.58 31.45 T226.00 32.00"/>
+  <use class="filament-thread filament-glint" href="#filament-5-curve" stroke="url(#filament-5-thread)" stroke-dashoffset="-85"/>
+  <g class="filament-tip" fill="url(#filament-5-halo)"><ellipse cx="14" cy="32" rx="17" ry="10"/><ellipse cx="226" cy="32" rx="17" ry="10"/></g>
 </g></svg></div><h3>都會律動 ↔ 私密夜色</h3><p>HYBS、Daniel Caesar 與 Joji 都可能柔和而親密，節拍與和聲卻各有重心。前者常更輕盈，Daniel Caesar 偏溫潤的 Soul，Joji 常帶灰暗的電子顆粒感。</p></article>
-</div><div class="listening-path glow-card"><span class="eyebrow">你的聽感路線</span><div class="path-stops"><span>親密的人聲</span><div class="connection-wave path-wave" aria-hidden="true" style="--wave-period:13.70s;--wave-phase:-8.4s"><svg viewBox="0 0 240 64" focusable="false">
+</div><div class="listening-path glow-card"><span class="eyebrow">你的聽感路線</span><div class="path-stops"><span>親密的人聲</span><div class="connection-wave path-wave" aria-hidden="true"><svg viewBox="0 0 240 64" focusable="false">
 <defs>
-  <linearGradient id="filament-6-thread" x1="14" y1="18" x2="226" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".94"/><stop offset=".48" stop-color="#f4efff" stop-opacity=".7"/><stop offset="1" stop-color="#fffaff" stop-opacity=".94"/></linearGradient>
-  <radialGradient id="filament-6-halo"><stop stop-color="#fff8ff" stop-opacity=".48"/><stop offset=".18" stop-color="#eee4ff" stop-opacity=".25"/><stop offset=".46" stop-color="#d9c4ee" stop-opacity=".08"/><stop offset=".74" stop-color="#c6a7eb" stop-opacity=".02"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
-  <radialGradient id="filament-6-tip"><stop stop-color="#fffaff" stop-opacity=".88"/><stop offset=".24" stop-color="#fffaff" stop-opacity=".6"/><stop offset=".58" stop-color="#f0e5ff" stop-opacity=".16"/><stop offset="1" stop-color="#e7d4fa" stop-opacity="0"/></radialGradient>
-  <linearGradient id="filament-6-fan" x1="12" y1="18" x2="49" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".08"/><stop offset=".09" stop-color="#fffaff" stop-opacity=".52"/><stop offset=".35" stop-color="#f3eaff" stop-opacity=".15"/><stop offset="1" stop-color="#e8dafa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-6-thread" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".12" stop-color="#c6a7eb" stop-opacity=".6"/><stop offset=".43" stop-color="#ece1ff" stop-opacity=".95"/><stop offset=".7" stop-color="#c6b0e5" stop-opacity=".78"/><stop offset=".9" stop-color="#c6a7eb" stop-opacity=".5"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-6-echo" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".25" stop-color="#bca5dc" stop-opacity=".75"/><stop offset=".68" stop-color="#b6c9cc" stop-opacity=".8"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="filament-6-halo"><stop stop-color="#dec9f8" stop-opacity=".45"/><stop offset=".25" stop-color="#c6a7eb" stop-opacity=".16"/><stop offset=".65" stop-color="#c6a7eb" stop-opacity=".035"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
+  <path id="filament-6-curve" class="filament-shape" pathLength="100" d="M14.00 32.00 Q22.83 34.01 27.25 34.67 Q31.67 35.32 36.08 35.73 Q40.50 36.13 44.92 36.21 Q49.33 36.30 53.75 35.96 Q58.17 35.61 62.58 34.72 Q67.00 33.82 71.42 32.33 Q75.83 30.83 80.25 28.83 Q84.67 26.82 89.08 24.57 Q93.50 22.31 97.92 20.22 Q102.33 18.12 106.75 16.64 Q111.17 15.16 115.58 14.69 Q120.00 14.21 124.42 14.93 Q128.83 15.64 133.25 17.47 Q137.67 19.30 142.08 21.91 Q146.50 24.51 150.92 27.37 Q155.33 30.23 159.75 32.79 Q164.17 35.35 168.58 37.17 Q173.00 38.98 177.42 39.83 Q181.83 40.68 186.25 40.58 Q190.67 40.48 195.08 39.67 Q199.50 38.86 203.92 37.68 Q208.33 36.51 212.75 35.30 Q217.17 34.10 221.58 33.05 T226.00 32.00"/>
 </defs>
 <g class="filament-field">
-  <path d="M14 18 C82 8 153 55 226 46 C154 50 83 21 14 18Z" fill="url(#filament-6-thread)" opacity=".09"/>
-  <g stroke="url(#filament-6-thread)"><path class="filament-thread filament-haze" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-aura" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-echo" d="M14 18 C88 5 152 60 226 46"/><path class="filament-thread filament-core" d="M14 18 C82 16 153 48 226 46"/></g>
-  <g><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-6-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-6-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-6-tip)"/></g>
-  <g transform="translate(240 64) rotate(180)"><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-6-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-6-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-6-tip)"/></g>
-</g></svg></div><span>柔軟的律動</span><div class="connection-wave path-wave" aria-hidden="true" style="--wave-period:14.35s;--wave-phase:-9.8s"><svg viewBox="0 0 240 64" focusable="false">
+  <g stroke="url(#filament-6-thread)"><use class="filament-thread filament-haze" href="#filament-6-curve"/><use class="filament-thread filament-aura" href="#filament-6-curve"/><use class="filament-thread filament-core" href="#filament-6-curve"/></g>
+  <path class="filament-thread filament-echo" stroke="url(#filament-6-echo)" d="M14.00 32.00 Q22.83 33.41 27.25 33.18 Q31.67 32.96 36.08 32.00 Q40.50 31.05 44.92 29.61 Q49.33 28.17 53.75 26.58 Q58.17 24.98 62.58 23.59 Q67.00 22.20 71.42 21.32 Q75.83 20.44 80.25 20.26 Q84.67 20.08 89.08 20.65 Q93.50 21.21 97.92 22.40 Q102.33 23.60 106.75 25.20 Q111.17 26.80 115.58 28.54 Q120.00 30.27 124.42 31.88 Q128.83 33.49 133.25 34.77 Q137.67 36.05 142.08 36.91 Q146.50 37.76 150.92 38.17 Q155.33 38.59 159.75 38.62 Q164.17 38.66 168.58 38.41 Q173.00 38.16 177.42 37.73 Q181.83 37.30 186.25 36.77 Q190.67 36.24 195.08 35.66 Q199.50 35.08 203.92 34.49 Q208.33 33.91 212.75 33.38 Q217.17 32.84 221.58 32.42 T226.00 32.00"/>
+  <use class="filament-thread filament-glint" href="#filament-6-curve" stroke="url(#filament-6-thread)" stroke-dashoffset="-102"/>
+  <g class="filament-tip" fill="url(#filament-6-halo)"><ellipse cx="14" cy="32" rx="17" ry="10"/><ellipse cx="226" cy="32" rx="17" ry="10"/></g>
+</g></svg></div><span>柔軟的律動</span><div class="connection-wave path-wave" aria-hidden="true"><svg viewBox="0 0 240 64" focusable="false">
 <defs>
-  <linearGradient id="filament-7-thread" x1="14" y1="18" x2="226" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".94"/><stop offset=".48" stop-color="#f4efff" stop-opacity=".7"/><stop offset="1" stop-color="#fffaff" stop-opacity=".94"/></linearGradient>
-  <radialGradient id="filament-7-halo"><stop stop-color="#fff8ff" stop-opacity=".48"/><stop offset=".18" stop-color="#eee4ff" stop-opacity=".25"/><stop offset=".46" stop-color="#d9c4ee" stop-opacity=".08"/><stop offset=".74" stop-color="#c6a7eb" stop-opacity=".02"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
-  <radialGradient id="filament-7-tip"><stop stop-color="#fffaff" stop-opacity=".88"/><stop offset=".24" stop-color="#fffaff" stop-opacity=".6"/><stop offset=".58" stop-color="#f0e5ff" stop-opacity=".16"/><stop offset="1" stop-color="#e7d4fa" stop-opacity="0"/></radialGradient>
-  <linearGradient id="filament-7-fan" x1="12" y1="18" x2="49" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".08"/><stop offset=".09" stop-color="#fffaff" stop-opacity=".52"/><stop offset=".35" stop-color="#f3eaff" stop-opacity=".15"/><stop offset="1" stop-color="#e8dafa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-7-thread" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".12" stop-color="#c6a7eb" stop-opacity=".6"/><stop offset=".43" stop-color="#ece1ff" stop-opacity=".95"/><stop offset=".7" stop-color="#c6b0e5" stop-opacity=".78"/><stop offset=".9" stop-color="#c6a7eb" stop-opacity=".5"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-7-echo" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".25" stop-color="#bca5dc" stop-opacity=".75"/><stop offset=".68" stop-color="#b6c9cc" stop-opacity=".8"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="filament-7-halo"><stop stop-color="#dec9f8" stop-opacity=".45"/><stop offset=".25" stop-color="#c6a7eb" stop-opacity=".16"/><stop offset=".65" stop-color="#c6a7eb" stop-opacity=".035"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
+  <path id="filament-7-curve" class="filament-shape" pathLength="100" d="M14.00 32.00 Q22.83 33.58 27.25 34.45 Q31.67 35.32 36.08 36.28 Q40.50 37.24 44.92 38.18 Q49.33 39.11 53.75 39.83 Q58.17 40.56 62.58 40.81 Q67.00 41.07 71.42 40.61 Q75.83 40.15 80.25 38.83 Q84.67 37.51 89.08 35.37 Q93.50 33.22 97.92 30.53 Q102.33 27.83 106.75 25.03 Q111.17 22.22 115.58 19.85 Q120.00 17.48 124.42 16.03 Q128.83 14.57 133.25 14.31 Q137.67 14.06 142.08 15.01 Q146.50 15.97 150.92 17.88 Q155.33 19.79 159.75 22.20 Q164.17 24.61 168.58 26.99 Q173.00 29.37 177.42 31.27 Q181.83 33.18 186.25 34.35 Q190.67 35.52 195.08 35.89 Q199.50 36.27 203.92 35.98 Q208.33 35.69 212.75 34.95 Q217.17 34.20 221.58 33.10 T226.00 32.00"/>
 </defs>
 <g class="filament-field">
-  <path d="M14 18 C82 8 153 55 226 46 C154 50 83 21 14 18Z" fill="url(#filament-7-thread)" opacity=".09"/>
-  <g stroke="url(#filament-7-thread)"><path class="filament-thread filament-haze" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-aura" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-echo" d="M14 18 C88 5 152 60 226 46"/><path class="filament-thread filament-core" d="M14 18 C82 16 153 48 226 46"/></g>
-  <g><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-7-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-7-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-7-tip)"/></g>
-  <g transform="translate(240 64) rotate(180)"><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-7-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-7-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-7-tip)"/></g>
-</g></svg></div><span>朦朧的空間</span><div class="connection-wave path-wave" aria-hidden="true" style="--wave-period:15.00s;--wave-phase:-11.2s"><svg viewBox="0 0 240 64" focusable="false">
+  <g stroke="url(#filament-7-thread)"><use class="filament-thread filament-haze" href="#filament-7-curve"/><use class="filament-thread filament-aura" href="#filament-7-curve"/><use class="filament-thread filament-core" href="#filament-7-curve"/></g>
+  <path class="filament-thread filament-echo" stroke="url(#filament-7-echo)" d="M14.00 32.00 Q22.83 34.07 27.25 34.44 Q31.67 34.80 36.08 34.60 Q40.50 34.40 44.92 33.73 Q49.33 33.05 53.75 32.08 Q58.17 31.11 62.58 30.03 Q67.00 28.96 71.42 27.97 Q75.83 26.98 80.25 26.20 Q84.67 25.42 89.08 24.92 Q93.50 24.41 97.92 24.18 Q102.33 23.94 106.75 23.95 Q111.17 23.95 115.58 24.15 Q120.00 24.35 124.42 24.71 Q128.83 25.08 133.25 25.60 Q137.67 26.13 142.08 26.82 Q146.50 27.51 150.92 28.36 Q155.33 29.20 159.75 30.16 Q164.17 31.12 168.58 32.10 Q173.00 33.07 177.42 33.93 Q181.83 34.79 186.25 35.37 Q190.67 35.96 195.08 36.14 Q199.50 36.31 203.92 36.02 Q208.33 35.73 212.75 35.00 Q217.17 34.27 221.58 33.13 T226.00 32.00"/>
+  <use class="filament-thread filament-glint" href="#filament-7-curve" stroke="url(#filament-7-thread)" stroke-dashoffset="-119"/>
+  <g class="filament-tip" fill="url(#filament-7-halo)"><ellipse cx="14" cy="32" rx="17" ry="10"/><ellipse cx="226" cy="32" rx="17" ry="10"/></g>
+</g></svg></div><span>朦朧的空間</span><div class="connection-wave path-wave" aria-hidden="true"><svg viewBox="0 0 240 64" focusable="false">
 <defs>
-  <linearGradient id="filament-8-thread" x1="14" y1="18" x2="226" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".94"/><stop offset=".48" stop-color="#f4efff" stop-opacity=".7"/><stop offset="1" stop-color="#fffaff" stop-opacity=".94"/></linearGradient>
-  <radialGradient id="filament-8-halo"><stop stop-color="#fff8ff" stop-opacity=".48"/><stop offset=".18" stop-color="#eee4ff" stop-opacity=".25"/><stop offset=".46" stop-color="#d9c4ee" stop-opacity=".08"/><stop offset=".74" stop-color="#c6a7eb" stop-opacity=".02"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
-  <radialGradient id="filament-8-tip"><stop stop-color="#fffaff" stop-opacity=".88"/><stop offset=".24" stop-color="#fffaff" stop-opacity=".6"/><stop offset=".58" stop-color="#f0e5ff" stop-opacity=".16"/><stop offset="1" stop-color="#e7d4fa" stop-opacity="0"/></radialGradient>
-  <linearGradient id="filament-8-fan" x1="12" y1="18" x2="49" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#fffaff" stop-opacity=".08"/><stop offset=".09" stop-color="#fffaff" stop-opacity=".52"/><stop offset=".35" stop-color="#f3eaff" stop-opacity=".15"/><stop offset="1" stop-color="#e8dafa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-8-thread" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".12" stop-color="#c6a7eb" stop-opacity=".6"/><stop offset=".43" stop-color="#ece1ff" stop-opacity=".95"/><stop offset=".7" stop-color="#c6b0e5" stop-opacity=".78"/><stop offset=".9" stop-color="#c6a7eb" stop-opacity=".5"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <linearGradient id="filament-8-echo" x1="14" y1="32" x2="226" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#c6a7eb" stop-opacity="0"/><stop offset=".25" stop-color="#bca5dc" stop-opacity=".75"/><stop offset=".68" stop-color="#b6c9cc" stop-opacity=".8"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="filament-8-halo"><stop stop-color="#dec9f8" stop-opacity=".45"/><stop offset=".25" stop-color="#c6a7eb" stop-opacity=".16"/><stop offset=".65" stop-color="#c6a7eb" stop-opacity=".035"/><stop offset="1" stop-color="#c6a7eb" stop-opacity="0"/></radialGradient>
+  <path id="filament-8-curve" class="filament-shape" pathLength="100" d="M14.00 32.00 Q22.83 31.99 27.25 32.44 Q31.67 32.89 36.08 33.76 Q40.50 34.64 44.92 35.90 Q49.33 37.17 53.75 38.67 Q58.17 40.18 62.58 41.65 Q67.00 43.12 71.42 44.18 Q75.83 45.24 80.25 45.52 Q84.67 45.81 89.08 45.05 Q93.50 44.30 97.92 42.47 Q102.33 40.64 106.75 37.96 Q111.17 35.28 115.58 32.20 Q120.00 29.11 124.42 26.19 Q128.83 23.27 133.25 21.04 Q137.67 18.82 142.08 17.67 Q146.50 16.51 150.92 16.53 Q155.33 16.54 159.75 17.57 Q164.17 18.59 168.58 20.26 Q173.00 21.93 177.42 23.80 Q181.83 25.67 186.25 27.34 Q190.67 29.01 195.08 30.22 Q199.50 31.42 203.92 32.06 Q208.33 32.70 212.75 32.80 Q217.17 32.89 221.58 32.44 T226.00 32.00"/>
 </defs>
 <g class="filament-field">
-  <path d="M14 18 C82 8 153 55 226 46 C154 50 83 21 14 18Z" fill="url(#filament-8-thread)" opacity=".09"/>
-  <g stroke="url(#filament-8-thread)"><path class="filament-thread filament-haze" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-aura" d="M14 18 C82 16 153 48 226 46"/><path class="filament-thread filament-echo" d="M14 18 C88 5 152 60 226 46"/><path class="filament-thread filament-core" d="M14 18 C82 16 153 48 226 46"/></g>
-  <g><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-8-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-8-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-8-tip)"/></g>
-  <g transform="translate(240 64) rotate(180)"><ellipse cx="14" cy="18" rx="14" ry="18" fill="url(#filament-8-halo)"/><path d="M14 3 C16 15 18 17 49 20 C22 20 16 23 14 33 C12 23 12 13 14 3Z" fill="url(#filament-8-fan)"/><ellipse cx="14" cy="18" rx="3.2" ry="16" fill="url(#filament-8-tip)"/></g>
+  <g stroke="url(#filament-8-thread)"><use class="filament-thread filament-haze" href="#filament-8-curve"/><use class="filament-thread filament-aura" href="#filament-8-curve"/><use class="filament-thread filament-core" href="#filament-8-curve"/></g>
+  <path class="filament-thread filament-echo" stroke="url(#filament-8-echo)" d="M14.00 32.00 Q22.83 33.44 27.25 34.04 Q31.67 34.64 36.08 35.12 Q40.50 35.59 44.92 35.93 Q49.33 36.26 53.75 36.42 Q58.17 36.59 62.58 36.55 Q67.00 36.52 71.42 36.25 Q75.83 35.97 80.25 35.41 Q84.67 34.85 89.08 33.97 Q93.50 33.08 97.92 31.90 Q102.33 30.72 106.75 29.32 Q111.17 27.92 115.58 26.47 Q120.00 25.02 124.42 23.74 Q128.83 22.45 133.25 21.57 Q137.67 20.68 142.08 20.39 Q146.50 20.10 150.92 20.49 Q155.33 20.88 159.75 21.92 Q164.17 22.95 168.58 24.46 Q173.00 25.96 177.42 27.65 Q181.83 29.33 186.25 30.85 Q190.67 32.38 195.08 33.43 Q199.50 34.48 203.92 34.84 Q208.33 35.20 212.75 34.80 Q217.17 34.41 221.58 33.20 T226.00 32.00"/>
+  <use class="filament-thread filament-glint" href="#filament-8-curve" stroke="url(#filament-8-thread)" stroke-dashoffset="-136"/>
+  <g class="filament-tip" fill="url(#filament-8-halo)"><ellipse cx="14" cy="32" rx="17" ry="10"/><ellipse cx="226" cy="32" rx="17" ry="10"/></g>
 </g></svg></div><span>有故事的風景</span></div><p class="collection-note">這是一條可以穿過曲風的路線：從 Clairo、Babygirl，到 HYBS、CAS，再走向 AURORA、坂本龍一與 Evan Call。</p></div></section>
 <details class="references"><summary>閱讀筆記與資料來源</summary><div class="sources">
 <a href="https://www.allmusic.com/artist/cigarettes-after-sex-mn0003569044" target="_blank" rel="noopener">CAS · AllMusic ↗</a><a href="https://www.allmusic.com/artist/clairo-mn0003716129/biography" target="_blank" rel="noopener">Clairo · AllMusic ↗</a><a href="https://www.thelaufeyfoundation.org/about" target="_blank" rel="noopener">Laufey Foundation ↗</a><a href="https://www.allmusic.com/artist/daniel-caesar-mn0003180014" target="_blank" rel="noopener">Daniel Caesar · AllMusic ↗</a><a href="https://www.allmusic.com/artist/aurora-mn0003357903" target="_blank" rel="noopener">AURORA · AllMusic ↗</a><a href="https://www.allmusic.com/artist/joji-mn0001064208" target="_blank" rel="noopener">Joji · AllMusic ↗</a><a href="https://www.allmusic.com/artist/ryuchi-sakamoto-mn0000587608" target="_blank" rel="noopener">坂本龍一 · AllMusic ↗</a><a href="https://miraclebus.com/composer/evancall" target="_blank" rel="noopener">Evan Call · 官方資料 ↗</a><a href="https://open.spotify.com/artist/4mr4X9nJC8DPlNukWbgAaI" target="_blank" rel="noopener">HYBS · Spotify ↗</a><a href="https://babygirl1994.bandcamp.com/" target="_blank" rel="noopener">Babygirl · Bandcamp ↗</a></div><p>原有名單版本資料查核：2026.10.15；新增名單來源整理：2026.10.16。黑膠推薦以作品內容與你的聽感偏好為依據，並非壓片音質排名；售價、庫存及運送地區以連結商店為準。每組的收藏推薦附發行或零售資料；新增音樂人的作品來源列於個別介紹底部。曲風與畫面比喻為編輯整理，單一標籤不能概括音樂人的全部作品。</p></details>
@@ -758,6 +756,7 @@ function setPage(id, options={}) {
   if(changed)$('#pageStatus').textContent=`已切換至${pageNames[id]}分頁`;
   scheduleArtistScrollEdges();
   fogState?.update();
+  connectionWaves?.update();
 }
 $$('[data-page]').forEach(b=>b.addEventListener('click',()=>setPage(b.dataset.page,{history:true,scroll:true})));
 const glassDock=$('.dock');
@@ -787,6 +786,67 @@ window.addEventListener('hashchange',()=>setPage(location.hash.slice(1),{scroll:
 
 // Viewport-wide smoke field: procedural texture, displaced particles, fading clear trails.
 // No remote images, shaders or libraries are required for the interaction.
+let connectionWaves=null;
+function createConnectionWaves(){
+  const waves=$$('.connection-wave').map((element,index)=>({
+    element,index,shape:element.querySelector('.filament-shape'),
+    echo:element.querySelector('.filament-echo'),glint:element.querySelector('.filament-glint')
+  }));
+  const visible=new Set(),byElement=new Map(waves.map(wave=>[wave.element,wave]));
+  const samples=lightMotion?20:24,frameInterval=1000/(lightMotion?20:30),tau=Math.PI*2;
+  let raf=0,last=0,time=0;
+  // A tapered travelling wave: fixed soft ends, changing crests and two intertwined threads.
+  function curve(phase,echo=false){
+    const points=[];
+    for(let n=0;n<=samples;n++){
+      const u=n/samples,envelope=Math.pow(Math.sin(Math.PI*u),.85);
+      const wave=echo
+        ?12*Math.sin(u*tau*1.12-phase+.85)+4*Math.sin(u*tau*1.7+phase*.48)
+        :15*Math.sin(u*tau*1.12-phase)+3.5*Math.sin(u*tau*2.05-phase*.67+1.1);
+      points.push([14+212*u,32+envelope*wave]);
+    }
+    let d=`M${points[0][0].toFixed(2)} ${points[0][1].toFixed(2)}`;
+    for(let n=1;n<samples;n++){
+      const [x,y]=points[n],[nx,ny]=points[n+1];
+      d+=` Q${x.toFixed(2)} ${y.toFixed(2)} ${((x+nx)/2).toFixed(2)} ${((y+ny)/2).toFixed(2)}`;
+    }
+    return d+` T${points[samples][0].toFixed(2)} ${points[samples][1].toFixed(2)}`;
+  }
+  function shouldRun(){return currentPage==='connections'&&!paused&&!reducedMotion.matches&&!document.hidden&&visible.size>0;}
+  function tick(now){
+    raf=0;
+    if(!shouldRun()){last=0;return;}
+    if(!last)last=now;
+    if(now-last>=frameInterval){
+      time+=Math.min((now-last)/1000,.08);last=now;
+      visible.forEach(wave=>{
+        const phase=time*(1.12+(wave.index%3)*.13)+wave.index*.81;
+        wave.shape.setAttribute('d',curve(phase));
+        wave.echo.setAttribute('d',curve(phase,true));
+        wave.glint.setAttribute('stroke-dashoffset',String(-(time*11+wave.index*17)%100));
+      });
+    }
+    raf=requestAnimationFrame(tick);
+  }
+  function update(){
+    if(shouldRun()){if(!raf){last=0;raf=requestAnimationFrame(tick);}}
+    else{if(raf)cancelAnimationFrame(raf);raf=0;last=0;}
+  }
+  // One bounded loop for visible decorations only; no blur filters or full-page redraws.
+  if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(({target,isIntersecting})=>{
+        const wave=byElement.get(target);
+        if(isIntersecting)visible.add(wave);else visible.delete(wave);
+      });
+      update();
+    },{threshold:.01});
+    waves.forEach(wave=>observer.observe(wave.element));
+  }else waves.forEach(wave=>visible.add(wave));
+  document.addEventListener('visibilitychange',update);
+  return {update};
+}
+
 let fogState=null;
 function createMist() {
   const hero=$('#mistHero'),canvas=$('#mistCanvas'),ctx=canvas.getContext('2d');
@@ -948,6 +1008,7 @@ function applyMotion(){
   if(paused)$$('.focus-reveal.is-arriving').forEach(settleFocusEntrance);
   const b=$('#motionToggle');b.setAttribute('aria-pressed',String(paused));b.setAttribute('aria-label',paused?'開啟動畫':'暫停動畫');b.textContent=paused?'動態暫停':'動態開啟';
   fogState?.update();if(paused)fogState?.drawStatic();
+  connectionWaves?.update();
 }
 $('#motionToggle').addEventListener('click',()=>{paused=!paused;applyMotion()});
 reducedMotion.addEventListener('change',e=>{paused=e.matches;applyMotion()});
@@ -955,6 +1016,7 @@ if(matchMedia('(pointer:fine)').matches){window.addEventListener('pointermove',e
 prepareMistText();
 renderGenres();renderArtistList();renderArtistDetail();
 prepareEntrances();
+connectionWaves=createConnectionWaves();
 fogState=createMist();applyMotion();
 setPage(location.hash.slice(1)||'genres');
 </script></body></html>
